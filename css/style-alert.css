@@ -1,0 +1,174 @@
+/*@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');*/
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+/*@font-face {*/
+  /*font-family: 'lucidaconsole';*/
+  /*font-style: normal;*/
+  /*font-weight: 400;*/
+  /*font-display: swap;*/
+  /*src: local('lucidaconsole Regular'), local('lucidaconsole-Regular'), url('../fonts/lucidaconsole.ttf') format('truetype');*/
+/*}*/
+@font-face {
+  font-family: 'Ubuntu-Light';
+  font-style: normal;
+  font-weight: 200;
+  /*font-display: swap;*/
+  src: local("Ubuntu Light"), local("Ubuntu-Light"), url('../fonts/Ubuntu-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu-Regular';
+  font-style: normal;
+  font-weight: 300;
+  /*font-display: swap;*/
+  src: local("Ubuntu Regular"), local("Ubuntu-Regular") url('../fonts/Ubuntu-Regular.ttf') format('truetype') ;
+}
+@font-face {
+  font-family: 'Ubuntu-Medium';
+  font-style: normal;
+  font-weight: 400;
+  /*font-display: swap;*/
+  src: local("Ubuntu Medium"), local("Ubuntu-Medium") url('../fonts/Ubuntu-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu-Bold';
+  font-style: normal;
+  font-weight: 500;
+  /*font-display: swap;*/
+  src: local("Ubuntu Bold"), local("Ubuntu-Bold") url('../fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+
+
+body{
+  /*font-family: 'LucidaConsole',monospace ;*/
+  /*height: 100vh;*/
+   /*background: linear-gradient(75deg,#2980b9,#8e44ad);*/
+
+ }
+
+.click, .popup_box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+.click{
+  background: #2981bc;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  border: 1px solid #0059b3;
+}
+.popup_box{
+  width: 530px;
+  background: #f2f2f2;
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid #b3b3b3;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  z-index: 9999;
+  display: none;
+}
+.popup_box i{
+  font-size: 60px;
+  color: #eb9447;
+  border: 5px solid #eb9447;
+  padding: 20px 40px;
+  border-radius: 50%;
+  margin: -10px 0 20px 0;
+}
+.popup_box h1{
+  font-size: 22px;
+  color: #1b2631;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+}
+.popup_box label{
+  font-size: 16px;
+  color: #404040;
+  font-style: normal;
+  font-weight: 200 ;
+  font-family: 'Ubuntu',monospace !important;
+}
+.popup_box .btns{
+  margin: 40px 0 0 0;
+}
+.btns .cancel-btn,.btns .cancel-btn1, .btns .confirm-btn{
+  background: #999999 !important;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #808080 !important;
+  padding: 10px 13px;
+  cursor: pointer;
+}
+.btns .confirm-btn{
+  margin-right: 20px;
+  background: rgb(221, 107, 85) !important;
+  border: 1px solid #cc0000 !important;
+  min-width: 80px;
+}
+.btns .cancel-btn:hover{
+  transition: .5s;
+  background: #8c8c8c !important;
+}
+.btns .cancel-btn1:hover{
+  transition: .5s;
+  background: #8c8c8c !important;
+}
+.btns .confirm-btn:hover{
+  transition: .5s;
+  background: rgb(179 72 51) !important;
+}
+.popup_box .header {
+  padding-bottom: 10px;
+  /*font-weight:600;*/
+}
+
+.popup_box .header-section {
+  font-size: 20px;
+}
+.popup_box .alert-icon {
+  width: 100px;
+  margin-bottom: 20px;
+}
+.popup_box .sub-text-section {
+  height: auto;
+  overflow-y: auto;
+  text-align: left;
+  min-height: 80px;
+  max-height: 200px;
+}
+.os-tabs-w-alert::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0.5em;
+}
+.os-tabs-w-alert::-webkit-scrollbar-thumb {
+  background-color: #adadad;
+  outline: 1px solid slategrey;
+}
+.os-tabs-w-alert::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+}
+
+.background-section {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 99999;
+  cursor: pointer;
+}

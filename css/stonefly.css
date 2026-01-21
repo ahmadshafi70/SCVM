@@ -1,0 +1,979 @@
+<!--
+
+/* Set "universal" font */
+
+
+.adminNavBarCell,
+.adminNavBarLink,
+.adminNavBarLinkHover,
+.alternateFieldLabel,
+.alternateColumnLabel,
+.controlCell,
+.controlCellLabel,
+.controlCellLink,
+.defaultAlternateRequiredFieldLabel,
+.defaultColumnLabel,
+.defaultFieldInfo,
+.defaultFieldIPField,
+.defaultFieldLabel,
+.defaultFieldLink,
+.defaultFormButton,
+.defaultRequiredFieldLabel,
+.footnoteNormal,
+.footnoteAbnormal,
+.networkNavLabel,
+.networkNavLink,
+.headerUserCartInfo,
+.loginCellLabel,
+.loginCellField,
+.menuMainLink,
+.pageAlternateDisplayTitle,
+.pageDisplaySubtitle,
+.pageDisplayTitle,
+.pageFlipperLink,
+.pageFlipperCell,
+.previewCell,
+.previewCellLink,
+.previewInfo,
+.previewFlipperLink,
+.previewFlipperCell,
+.previewLabel,
+.quickSearchCellLabel,
+.quickSearchCellField,
+.resultCellColLabel,
+.resultCellInfo,
+.resultCellLink,
+.resultCellSubInfo,
+.resultCellSubLink,
+.searchStats,
+.selectClearLink,
+.topNavBarLink,
+.userNavBarCell,
+.userNavBarLink
+{
+    font-family: poppins, sans-serif;
+}
+
+.alternateFieldLabelSmall
+{
+    font-size: 8pt;
+    font-family: poppins, sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+
+.defaultFieldInfoSmall
+{
+    font-family: poppins, sans-serif;
+}
+
+/* Set font size for "large" classes */
+
+.pageAlternateDisplayTitle,
+.pageDisplayTitle
+{
+    font-size: 16px;
+}
+
+/* Set font size for "middle" classes */
+
+.adminNavBarCell,
+.adminNavBarLink,
+.adminNavBarLinkHover,
+.alternateFieldLabel,
+.alternateColumnLabel,
+.controlCellLabel,
+.defaultFieldInfo,
+.defaultFieldIPField,
+.defaultFieldLabel,
+.defaultFieldLink,
+.defaultFormButton,
+.defaultRequiredFieldLabel,
+.defaultAlternateRequiredFieldLabel,
+.defaultColumnLabel,
+.footnoteNormal,
+.footnoteAbnormal,
+.networkNavLabel,
+.networkNavLink,
+.loginCellLabel,
+.loginCellField,
+.menuMainLink,
+.pageDisplaySubtitle,
+.quickSearchCellField,
+.quickSearchCellLabel,
+.resultCellColLabel,
+.resultCellInfo,
+.resultCellLink,
+.topNavBarLink,
+.userNavBarCell,
+.userNavBarLink
+{
+    font-size: 12px;
+}
+
+
+/* Set font size for "fine print" classes */
+.controlCell,
+.controlCellLink,
+.headerUserCartInfo,
+.previewCell,
+.previewCellLink,
+.previewLabel,
+.previewInfo,
+.pageFlipperCell,
+.pageFlipperLink,
+.previewFlipperCell,
+.previewFlipperLink,
+.resultCellSubInfo,
+.resultCellSubLink,
+.searchStats,
+.selectClearLink
+{
+    font-size: 10px;
+}
+
+
+/* Set bold for "bold print" classes */
+.alternateFieldLabel,
+.alternateColumnLabel,
+.controlCellLabel,
+.headerUserCartInfo,
+.pageAlternateDisplayTitle,
+.pageDisplaySubtitle,
+.pageDisplayTitle,
+.searchStats
+{
+    font-weight: bold;
+    text-align: left;
+}
+
+.loginCellLabel
+{
+    font-weight: bold;
+    /* text-align: right; */
+    /*color: #000000;*/
+    /*background-color: #ffcc99;*/
+}
+
+.loginCellTitle
+{
+    font-weight: bold;
+    text-align: center;
+    /*color: #FFFFFF;*/
+    /*background-color: #cc6600;*/
+}
+
+.menuMainLink
+{
+    font-weight: bold;
+    color: #000000;
+}
+
+.userNavBarCell,
+.quickSearchCellLabel
+{
+    font-weight: bold;
+    color: #FFFFFF;
+    /*background-color: #C00000;*/
+}
+
+.topNavBarLink
+{
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.userNavBarLink
+{
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+    /*background-color: #C00000;*/
+}
+
+.quickSearchCellLabel
+{
+    text-align: right;
+}
+
+.adminNavBarCell
+{
+    font-weight: bold;
+    color: #000000;
+    background-color: #E0E0E0;
+}
+
+.adminNavBarLink
+{
+    font-weight: bold;
+    text-decoration: none;
+    color: #244B75;
+    background-color: #E0E0E0;
+}
+
+.adminNavBarLinkHover
+{
+    font-weight: bold;
+    color: #244B75;
+    background-color: #C0FFC0;
+}
+
+
+.previewCell
+{
+    text-align: center;
+}
+
+.previewLabel
+{
+    font-weight: bold;
+    text-align: right;
+}
+
+.defaultFieldLabel
+{
+    font-weight: bold;
+    text-align: right;
+}
+
+.defaultRequiredFieldLabel
+{
+    font-weight: bold;
+    text-align: right;
+    /*width: 40%;*/
+}
+
+.tableKey
+{
+    text-align: right;
+    color: #FF0000;
+}
+
+.defaultAlternateRequiredFieldLabel
+{
+    font-weight: bold;
+    color: #f25a4f;
+    padding:10px 0px;
+}
+
+.footnoteNormal font {
+    font-size: 13px;
+}
+.footnoteNormal {
+    font-weight: bold;
+    color: #02b302;
+    padding: 10px 0;
+}
+
+.footnoteAbnormal
+{
+    font-weight: bold;
+    color: #f25a4f;
+    padding:10px 0px;
+}
+
+.defaultColumnLabel
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+.resultCellColLabel
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+.pageFlipperCell
+{
+    font-weight: bold;
+}
+
+.pageFlipperLink
+{
+    font-weight: bold;
+    text-decoration: none;
+    color: #000099;
+}
+
+.selectClearLink
+{
+    font-weight: bold;
+    text-decoration: none;
+    color: #000099;
+}
+
+.previewFlipperLink
+{
+    text-decoration: none;
+}
+
+.controlCell,
+.controlCellLabel
+{
+    background-color: transparent;
+}
+.controlCellLink
+{
+    font-weight: bold;
+    text-decoration: none;
+    color: #000099;
+    background-color: #E0E0E0;
+}
+
+.defaultFormButton
+{
+    font-weight: bold;
+}
+
+.networkNavLabel,
+.networkNavLink
+{
+    color: #000099;
+    text-decoration: none;
+}
+
+/* Set hover color for links */
+
+.adminNavBarLink:hover,
+.adminNavBarLinkHover:hover,
+.controlCellLink:hover,
+.defaultFieldLink:hover,
+.networkNavLink:hover,
+.menuMainLink:hover,
+.pageFlipperLink:hover,
+.previewCell:hover,
+.previewCellLink:hover,
+.previewFlipperLink:hover,
+.resultCellLink:hover,
+.resultCellSubLink:hover,
+.selectClearLink:hover
+{
+    color: #990000;
+}
+
+
+
+
+.smallButton
+{
+    font-weight: bold;
+    font-size: 10pt;
+    line-height: 10pt;
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    color: black
+}
+.topnavTitle
+{
+    font-weight: bold;
+    font-size: 20pt;
+    line-height: 14pt;
+    font-family: poppins, sans-serif;
+    font-style: italic;
+    color: white
+}
+.topnavDisplay
+{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12pt;
+    font-family: poppins, sans-serif;
+    color: white;
+    /*background-color:#404a56;*/
+    padding: 15px 0;
+}
+.topnavLink
+{
+    font-weight: bold;
+    font-size: 12pt;
+    line-height: 12pt;
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    color: white
+}
+.errorLink
+{
+    font-weight: bold;
+    font-size: 12pt;
+    line-height: 12pt;
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    color: white;
+    background-color: red
+}
+.leftnavLink
+{
+    font-weight: bold;
+    font-size: 12pt;
+    line-height: 12pt;
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    color: white
+}
+.leftnavLink:hover{color:yellow}
+.topnavLink:hover{color:yellow}
+
+.leftnavSubLink
+{
+    font-weight: bold;
+    font-size: 10pt;
+    line-height: 10pt;
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    color: white
+}
+.leftnavDisplay
+{
+    font-weight: bold;
+    font-size: 12pt;
+    line-height: 12pt;
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    color: white
+}
+.leftnavSubDisplay
+{
+    font-weight: bold;
+    font-size: 10pt;
+    line-height: 12pt;
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    color: white
+}
+
+.a,
+.sbr,
+.lb,
+.qb,
+.or,
+.bl,
+.gy,
+.bbl,
+.sgl1,
+.sgl,
+.xs,
+.s,
+.mm,
+.l,
+.tableRowHighlight,
+.tabOn,
+.tabOff,
+.rowOff,
+.rowOn,
+.contentFont
+{
+    font-family: poppins, sans-serif;
+}
+
+a:hover{color:red}
+.sbr,.lb
+{
+    font-size:4px
+}
+.qb
+{
+    color:#009
+}
+.or
+{
+    color:#F60
+}
+.bl
+{
+    color:#036
+}
+.gy
+{
+    color:#999
+}
+.bbl
+{
+    text-decoration:none;color:#036;font-size:small
+}
+.sgl1
+{
+    text-decoration:none;color:#333;font-size:x-small
+}
+.sgl
+{
+    color:#1c64a1;font-size:12px; font-weight:normal
+}
+.xs
+{
+    font-size:xx-small
+}
+.s
+{
+    font-size:x-small
+}
+.m
+{
+    font-size:small
+}
+.l
+{
+    font-size:medium
+}
+
+.tableRowHighlight
+{
+    background-color:#F5F5F5
+}
+
+.tabOn {
+    font-size:14px;
+    background-color:#32b4e6;
+    color:#FFFFFF; font-weight:bold; cursor:pointer;
+}
+.tabOff {font-size:12px; font-weight: bold; background-color:#eeeeee; color:#666666; cursor:pointer; padding: 10px 0; border-right: 1px solid #d5d5d5; border-left: 1px solid #d5d5d5; border-top: 1px solid #d5d5d5;  transition: 0.1s ease-out;}
+.tabOff:hover {
+
+    background-color: #c2c2c2;
+}
+/*.toptabOn {font-size:12px; background-color:#FFFFFF; color:#666666; font-weight:bold; cursor:pointer}*/
+/*.toptabOff {font-size:12px;background-color:#DDDDDD; color:#666666; font-weight:bold; cursor:pointer; padding: 10px 0;}*/
+/*.toptabOff:hover {font-size:12px;background-color:#FFFFFF; color:#666666; font-weight:bold; cursor:pointer}*/
+
+.toptabOff {
+    font-size: 12px;
+    background-color: transparent;
+    color: #ccc;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.toptabOn {
+    font-size: 12px;
+    background-color: transparent;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 3px solid #1d64a1;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.toptabOn .atoptab {
+
+    color: #464a4c;
+}
+
+.toptabOff:hover {
+    font-size: 12px;
+    background-color: transparent;
+    color: #666666;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 3px solid #1d64a1;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+a.atoptab {
+
+    font-size: 0.9rem;
+    font-family: poppins, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.3);
+
+}
+
+a.atoptab:visited {
+
+    font-size: 0.9rem;
+    font-family: poppins, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+}
+
+a.atoptab:hover {
+
+    font-size: 0.9rem;
+    font-family: poppins, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+}
+
+a.atoptab:visited {
+
+    text-decoration: none;
+}
+
+a.atoptab:active {
+
+    text-decoration: none;
+}
+
+a.toptab:visited {
+
+    text-decoration: none;
+}
+
+a.toptab:active {
+
+    text-decoration: none;
+}
+
+.topnavDisplayhide {
+
+    display: none;
+}
+
+.topnavDisplay {
+
+    padding: 15px;
+}
+
+.tab-bottom {
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.helptab {
+    font-size: 12px;
+    background-color: #27487c;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    float: right;
+    padding: 5px 20px;
+    margin: 10px 0px;
+}
+
+/*.helptab {min-width:108px; font-size:12px;background-color:#1c64a1; color:#FFFFFF; font-weight:bold; cursor:pointer}*/
+.helptab:hover {font-size:12px;background-color:#31b4e6; color:#FFFFFF; font-weight:bold; cursor:pointer}
+
+/*
+.SUBtabOn {font-size:12px; background-color:#DDDDDD; color:#286EC5; font-weight:bold; text-decoration:underline; cursor:pointer}
+.SUBtabOff {font-size:12px; background-color:#FFFFFF; color:#286EC5; font-weight:bold; text-decoration:underline; cursor:pointer}
+*/
+.SUBtabOn {font-size:12px; background-color:#DDDDDD; color:#666666; font-weight:bold; text-decoration:none; cursor:pointer; padding: 10px 0;}
+.SUBtabOff {font-size:12px; background-color:#FFFFFF; color:#666666; font-weight:bold; text-decoration:none; cursor:pointer; padding: 10px 0;}
+
+A.toptab {font-weight:bold; color:#666666;     font-family: poppins, sans-serif;
+    font-size:12px; text-decoration:none;}
+A.toptab:visited {font-weight:bold; color:#666666;     font-family: poppins, sans-serif;
+    font-size:12px; text-decoration:none;}
+A.toptab:hover {font-weight:bold; color:#666666;     font-family: poppins, sans-serif;
+    font-size:12px; text-decoration:none;}
+
+
+.rowOff
+{
+    background-color:#FFFFFF;
+}
+.rowOn
+{
+    background-color:#f9f9f9}
+}
+
+.navigated
+{
+    background-color:#6699CC;
+    font-weight: bold;
+    font-size: 10pt;
+    line-height: 10pt;
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    color: purple;
+    width: 100px;
+}
+.notNavigated
+{
+    background-color:#6699CC;
+    font-weight: bold;
+    font-size: 10pt;
+    line-height: 10pt;
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    color: white;
+    width: 100px;
+}
+.notNavigatable
+{
+    background-color:#3333CC;
+    font-weight: bold;
+    font-size: 12pt;
+    line-height: 12pt;
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    color: white;
+}
+.newHome
+{
+    font-weight: bold;
+    font-size: 9pt;
+    line-height: 9pt;
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    color: blue;
+}
+.newHomeTitle
+{
+    font-weight: bold;
+    font-size: 12pt;
+    line-height: 9pt;
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    color: blue;
+}
+.newHomeGreen
+{
+    background-color:green;
+}
+.newHomeYellow
+{
+    background-color:yellow;
+}
+.newHomeRed
+{
+    background-color:red;
+}
+.newHomeBlue
+{
+    background-color:blue;
+}
+.newHomeNavy
+{
+    background-color:navy;
+}
+.newHomeBlackNavBar
+{
+    font-weight: bold;
+    font-size: 8pt;
+    font-family: poppins, sans-serif;
+    background-color:black;
+    color: white;
+}
+.newHomeClusterManagementIscsiIps
+{
+    font-size: 10pt;
+    font-family: poppins, sans-serif;
+    color: black;
+}
+.newHomeResourceBar
+{
+    font-weight: bold;
+    font-size: 10pt;
+    font-family: poppins, sans-serif;
+    color: #374B91;
+}
+.newHomeWelcomeName
+{
+    font-family: poppins, sans-serif;
+    font-size:14pt;
+    color:white;
+}
+.discoveredSCs
+{
+    font-size: 8pt;
+    font-family: poppins, sans-serif;
+    color: black;
+}
+.discoverSCbutton
+{
+    font-size: 8pt;
+    font-family: poppins, sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.navigated:hover{color:yellow}
+.notNavigated:hover{color:yellow}
+
+.tableshaddow {border-style:solid; border-left-width:1px; border-top-width:0px; border-right-width:1px; border-bottom-width:1px; border-color:#BBBBBB;}
+
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+
+#passivelogin {
+
+    background: #ffffff26;
+    margin-left: 25%;
+    margin-right: 25%;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin-top: 2%;
+}
+
+#passivelogin .passive-user{
+    width:50%;
+    margin: 0.7em auto 0em auto;
+    opacity:1;
+    -webkit-animation-name:slidein_2;
+    -moz-animation-name:slidein_2;
+    -ms-animation-name:slidein_2;
+    animation-name:slidein_2;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    -ms-animation-duration:1s;
+    animation-duration:1s;
+}
+#passivelogin .passive-user input, #passivelogin .passive-pass input{
+    background:rgba(255,255,255,0.9);
+    border-radius:6px;
+    border:none;
+    box-shadow:none;
+    font-size:1.6em;
+    outline:none;
+    width:100%;
+    padding:1.2em;
+    -webkit-transition:all 0.4s;
+    -moz-transition:all 0.4s;
+    -o-transition:all 0.4s;
+    transition:all 0.4s;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    color: rgba(0,0,0,0.3);
+}
+#n-ctr-login .form-login .login-controls > div input.password-submit{
+    padding-right:80px;
+}
+#passivelogin .passive-user input:focus, #passivelogin .passive-pass input:focus,
+#passivelogin .passive-user input.focus, #passivelogin .passive-pass input.focus{
+    background:rgba(255,255,255,0.9);
+    color:#000000;
+}
+
+#passivelogin .passive-user input::-webkit-input-placeholder, #passivelogin .passive-pass input::-webkit-input-placeholder{
+    color:rgba(0,0,0,0.3);
+}
+#passivelogin .passive-user input::-moz-input-placeholder, #passivelogin .passive-pass input::-moz-input-placeholder{
+    color:rgba(0,0,0,0.3);
+}
+#passivelogin .passive-user input::-ms-input-placeholder, #passivelogin .passive-pass input::-ms-input-placeholder{
+    color:rgba(0,0,0,0.3);
+}
+
+#passivelogin .passive-user input:focus::-webkit-input-placeholder,
+#passivelogin .passive-user input.focus::-webkit-input-placeholder, #passivelogin .passive-pass input:focus::-webkit-input-placeholder,
+#passivelogin .passive-pass input.focus::-webkit-input-placeholder{
+    color:rgba(0,0,0,0.3);
+}
+#passivelogin .passive-user input:focus:-moz-placeholder,
+#passivelogin .passive-user input.focus:-moz-placeholder, #passivelogin .passive-pass input:focus:-moz-placeholder,
+#passivelogin .passive-pass input.focus:-moz-placeholder{
+    color:rgba(0,0,0,0.3);
+}
+#passivelogin .passive-user input:focus::-moz-placeholder,
+#passivelogin .passive-user input.focus::-moz-placeholder, #passivelogin .passive-pass input:focus::-moz-placeholder,
+#passivelogin .passive-pass input.focus::-moz-placeholder{
+    color:rgba(0,0,0,0.3);
+}
+#passivelogin .passive-user input:focus:-ms-input-placeholder,
+#passivelogin .passive-user input.focus:-ms-input-placeholder, #passivelogin .passive-pass input:focus:-ms-input-placeholder,
+#passivelogin .passive-pass input.focus:-ms-input-placeholder{
+    color:rgba(0,0,0,0.3);
+}
+
+#passivelogin .defaultFieldLabel {
+
+    color: #fff;
+}
+
+#passivelogin .btn-passive {
+
+    background: rgb(18, 124, 153);
+    border-radius: 0px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-family: poppins, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-style: solid;
+    border-width: 0px;
+    margin: 0px;
+}
+
+#passivelogin .prism-logo {
+
+    padding: 1em;
+}
+
+@media (max-width: 1300px) {
+
+    #passivelogin {
+
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+   td.login-discoverscs>form>table>tbody>tr
+     {
+         background: transparent ;
+         text-align: center;
+     }
+     td.login-discoverscs>form>table>tbody>tr>td>a
+     {
+         color: #fff ;
+         text-decoration: none;
+         font-family: poppins, sans-serif;
+         font-weight: 400;
+     }
+     td.login-discoverscs>form>table
+     {
+         border-color : transparent ;
+         border-left : 1px solid #4b585f ;
+     }
+     td.login-discoverscs>h5.tablehilite
+     {
+         color: #fff;
+         background: #0000002e;
+         padding: 8px;
+         font-size: 16px;
+     }
+     td.login-discoverscs>form>table>tbody>tr>td>input
+     {
+         background: rgb(18, 124, 153);
+         padding: 7px 14px;
+         font-weight: 500;
+         color: #fff;
+         font-family: Poppins,sans-serif;
+     }
+     td.login-discoverscs1>form>table>tbody>tr>td>input
+     {
+         font-size: 1.2em ;
+         font-weight: 600 ;
+         padding: 0.9em ;
+     }
+     td.login-discoverscs1>form>table>tbody>tr>td.defaultFieldLabel, td.login-discoverscs1>form>table>tbody>tr>td>input.defaultFormButton.btn-passive
+     {
+         font-weight: 400 ;
+     }
+
+
+     table.message-pointer>tbody>tr>td>A:visited {
+
+         color: #63ddff  ;
+     }
+     table.message-pointer>tbody>tr>td
+     {
+         font-family: poppins, sans-serif ;
+         font-weight: 400 ;
+         color: #fff ;
+     }
+     table.message-pointer>tbody>tr
+     {
+         background: #234151 ;
+     }

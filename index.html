@@ -1,0 +1,2098 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0059)https://50.215.24.115/StoneFly/bin/lv_summary.pl?object_id= -->
+<html class="layout-pf layout-pf-fixed" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+     <title>
+        SAN Summary
+     </title>
+ 
+     <meta content="text/html; charset=$charset" http-equiv="Content-Type">
+     <meta content="no-cache" http-equiv="Pragma">
+     <meta content="-1" http-equiv="Expires">
+     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=EmulateIE9, IE=EDGE">
+     <!-- Needed to force MS IE 8 into IE 7 compatibility mode so <wbr> works. -->
+     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"> 
+     <link rel="SHORTCUT ICON" href="https://50.215.24.115/StoneFly/presentation/stonefly/stnfly.ico">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="css/stonefly.css">
+
+     <link rel="stylesheet" href="css/datatables.min.css">
+     <link rel="stylesheet" href="css/responsive.dataTables.min.css">
+     <link rel="stylesheet" href="css/style.min.css">
+  
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+     <!--[if lt IE 9]>
+     <script src="/StoneFly/presentation/stonefly/bower_components/jquery/dist/jquery.min.js"></script>
+ <![endif]-->
+ <!--[if gte IE 9]><!-->
+     <script type="text/javascript" src="js/jquery.min.js"></script>
+  
+     <!--<script type="text/javascript">
+         if(localStorage.themeOption == 0){
+             $('head').prepend('<link rel="stylesheet" href="/StoneFly/presentation/stonefly/css/lightLoader.css?version=3.3">');
+ 
+         }
+         else{
+             $('head').prepend('<link rel="stylesheet" type="text/css" href="/StoneFly/presentation/stonefly/css/darkLoader.css?version=3.3">');
+         }
+     </script>-->
+     <link rel="stylesheet" type="text/css" href="css/darkLoader.css?version=3.3">
+     <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+     <link rel="stylesheet" type="text/css" href="css/style-alert.css">
+     <link href="css/mainc599.css?version=3.3" class="changeCss" rel="stylesheet">
+ 
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+ 
+     <script src="js/moment.js"></script>
+     <script src="js/Chart.min.js"></script>
+     <script src="js/select2.full.min.js"></script>
+     <script src="js/ckeditor.js"></script><style>.cke{visibility:hidden;}</style>
+     <script src="js/validator.min.js"></script>
+     <script src="js/daterangepicker.js"></script>
+     <script src="js/dropzone.js"></script>
+     <script src="js/mindmup-editabletable.js"></script>
+     <script src="js/jquery.dataTables.min.js"></script>
+     <script src="js/dataTables.bootstrap.min.js"></script>
+     <script src="js/fullcalendar.min.js"></script>
+     <script src="js/perfect-scrollbar.jquery.min.js"></script>
+     <script src="js/tether.min.js"></script>
+     <script src="js/util.js"></script>
+     <!--<script src="/StoneFly/templates/stonefly/StoneFly/presentation/stonefly/bower_components/bootstrap/js/dist/alert.js"></script>-->
+     <script src="js/button.js"></script>
+     <script src="js/carousel.js"></script>
+     <script src="js/collapse.js"></script>
+     <script src="js/dropdown.js"></script>
+     <!--                    <script src="/StoneFly/presentation/stonefly/bower_components/bootstrap/js/dist/modal.js"></script>-->
+     <script src="js/tab.js"></script>
+     <script src="js/tooltip.js"></script>
+     <script src="js/popover.js"></script>
+     <script src="js/mainc599.js?version=3.3"></script>
+ 
+     <script src="js/datatables.min.js"></script>
+     <script src="js/dataTables.responsive.min.js"></script>
+     <script src="js/jstree.min.js"></script>
+     <script src="js/Chart.min.js"></script><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+ 
+     <!--<![endif]-->
+     <style type="text/css">
+        body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+.element-box,
+.tab-bottom,
+.tableshaddow {
+    font-family: 'Poppins', sans-serif;
+}
+          ul.breadcrumb {
+            background: #ffffff !important;
+        }
+        .breadcrumb .support, .breadcrumb .support:hover {
+            color: #002D62;
+        }
+        .breadcrumb .logout-button {
+            color: #002D62;
+        }
+        li#j1_1 {
+
+    background: #ffffff !important;
+    margin-left: 0 !important;
+    color:#0e1d7d !important;
+}   
+.jstree-node.active .jstree-anchor {
+    color: #0e1d7d !important;
+}
+ul.jstree-container-ul>li.jstree-open>div.jstree-wholerow {
+ background: #0e0e0e00 !important;   
+}
+.help {
+    background: white !important;
+
+}
+.help li {
+    margin-right:20px;
+    color:#002d62 !important;
+}
+.jstree .jstree-open>.jstree-children  {
+    background: #002D62;
+}
+.menu-side-w {
+    box-shadow: none !important;
+}
+.jstree .jstree-open>.jstree-children {
+    border-left: none;
+    margin-left: 15px;
+    background: #ffffff1c;
+}
+.jstree .jstree-open>.jstree-children {
+    background: #002D62;
+}
+ .menu-side-w {
+    background-color: #002D62 !important;
+    color: #fff;
+    border-radius: 0;
+    box-shadow: 3px 3px 8px 2px #002D62 !important;
+    z-index: 9999;
+}
+.jstree .jstree-open>.jstree-children  {
+    background: #002D62 !important;
+}
+ul.breadcrumb
+ {
+    background: #ffffff;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 3px 3px 8px 2px #4f5a6759;
+}
+   /* Open node -> up arrow */
+    .jstree-node.has-sub-menu.jstree-open > a.jstree-anchor::after {
+        content: "\f077"; /* up arrow */
+    }
+
+    .menu-and-user {
+        margin-top: -60px !important;
+    }
+    .content-w {
+            background-color: #ffffff !important;
+    }
+    .nav.upper.nav-tabs .nav-link {
+        color: #374151;
+        
+        Line-height:20px;
+        font-weight: 600;
+        font-family: Poppins, sans-serif; font-size: 12px;
+    }
+    .os-tabs-w {
+    width: 12.2%;
+    /* font-size: 15px; */
+    padding: 0 !important;
+ 
+  
+    float: left;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(64, 156, 255, 0.1);
+    
+    margin-right: 10px !important;
+    border-radius: 10px;
+}
+/* Card container for the volume table */
+#table_volume_wrapper {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 16px 18px;
+    margin-top: 12px;
+}
+.nav.upper.nav-tabs .nav-link.active {
+    border: 0;
+    font-weight: 700;
+    padding-left: 0.6rem;
+    color:white;
+     background-color: #002D62 !important;
+}
+.element-box .tab-style-active {
+    font-weight: 700;
+    padding-left: 0.6rem;
+    color:white !important;
+     background-color: #002D62 !important;
+}
+.element-box .tab-style-active a {
+    color:white !important;
+   
+}
+.menu-side-w {
+    background-color:#002D62 !important;
+    color: #fff;
+    border-radius: 0;
+    box-shadow:none !important;
+    z-index: 9999;
+}
+.dataTables_wrapper {
+    margin: auto !important;
+}
+/* ===== Tabs Section Background ===== */
+.tab-bottom {
+    background: #EAEAEA; /* light gray/blue background */
+    border-radius: 10px;
+}
+
+/* Tab cells */
+.tab-bottom .tab-style,
+.tab-bottom .tab-style-active {
+    background: transparent;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* Active tab */
+.tab-bottom .tab-style-active {
+    background: #ffffff;
+    box-shadow: inset 0 ;
+}
+
+/* Tab links */
+.tab-bottom a {
+    color: #002D62 !important;
+  
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.tab-bottom a:hover {
+       color: #002D62 !important;
+  
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 1;
+    text-decoration: none;
+}
+.tab-bottom a {
+    color: #333;
+    text-decoration: none;
+}
+.content-box .element-box, .content-i .element-box {
+    float: left;
+    width: 86% !important;
+    padding: 0;
+    /* overflow: auto; */
+    margin: 0 !important;
+}
+.nav-tabs .nav-item {
+    margin-bottom: 0px;
+    margin-right: 0rem;
+    text-transform: capitalize;
+}
+.element-box {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   TOP HORIZONTAL TABS (PILLS)
+========================================================= */
+.tab-bottom {
+
+  margin-bottom: 18px;
+
+
+}
+
+.tab-bottom td {
+  padding: 0 !important;
+}
+
+
+
+/* =========================================================
+   GAP BETWEEN TABS & CARD
+========================================================= */
+.tab-bottom + table,
+.tab-bottom + #table_volume_wrapper {
+  margin-top: 14px;
+}
+
+/* =========================================================
+   MAIN CARD (DATATABLE WRAPPER)
+========================================================= */
+#table_volume_wrapper {
+  background: #ffffff;
+  border-radius: 14px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Remove legacy table shadow */
+#table_volume {
+  box-shadow: none !important;
+  border-radius: 0;
+}
+
+/* =========================================================
+   CARD HEADER (RESOURCES + SEARCH)
+========================================================= */
+#table_volume_wrapper::before {
+  content: "Resources";
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0b2d5b;
+  margin-bottom: 12px;
+}
+
+/* Search */
+#table_volume_filter {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+}
+
+#table_volume_filter input {
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+#table_volume thead th {
+  background: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  color: #334155;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 8px;
+}
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+#table_volume tbody td {
+  font-size: 12px;
+  color: #1e293b;
+  padding: 20px 8px;
+}
+
+#table_volume tbody tr {
+  border-bottom: 1px solid #ffffff;
+}
+
+#table_volume tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* =========================================================
+   CHECKBOX COLUMN
+========================================================= */
+#table_volume input[type="checkbox"] {
+  transform: scale(0.9);
+}
+
+/* =========================================================
+   FOOTER (SHOW ENTRIES + PAGINATION)
+========================================================= */
+.dataTables_length,
+.dataTables_info {
+  font-size: 11px;
+  color: #475569;
+}
+
+.dataTables_paginate {
+  margin-top: 10px;
+}
+
+.dataTables_paginate .paginate_button {
+  min-width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 8px !important;
+  background: #e5e7eb !important;
+  color: #0f172a !important;
+  border: none !important;
+  margin: 0 2px;
+  font-size: 11px;
+}
+
+.dataTables_paginate .paginate_button.current {
+  background: #0b2d5b !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(11, 45, 91, 0.35);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.btn-main {
+  background: #0b2d5b;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE SAFETY
+========================================================= */
+@media (max-width: 1200px) {
+  #table_volume_wrapper {
+    overflow-x: auto;
+  }
+}
+/* Footer container */
+.dt-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 14px;
+  padding: 8px 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Show entries */
+.dt-footer .dataTables_length {
+  display: flex !important;
+  align-items: center;
+  font-size: 12px;
+  color: #475569;
+}
+
+/* Info text */
+/* Pagination container */
+.dt-footer .dataTables_paginate {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+/* RESET ALL PAGINATION BUTTONS */
+.dt-footer .paginate_button {
+  background: none !important;
+  border: none !important;
+  padding: 0;
+  margin: 0;
+  color: #334155;
+  cursor: pointer;
+}
+
+/* Page number buttons */
+.dt-footer .paginate_button:not(.previous):not(.next) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50% !important;
+  background: #e2e8f0 !important;
+
+  font-size: 12px;
+  font-weight: 500;
+  color:#002d62 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;   /* ✅ FIX */
+}
+
+/* HOVER */
+.dt-footer .paginate_button:not(.previous):not(.next):hover {
+  background: #eaeaea !important;
+  color:#002D62 !important;
+}
+
+/* PREVIOUS & NEXT (TEXT ONLY) */
+.dt-footer .paginate_button.previous,
+.dt-footer .paginate_button.next {
+  background: none !important;
+  border-radius: 0;
+  padding: 0 6px;
+  font-weight: 400;
+  color: #2563eb;
+}
+
+/* DISABLED PREV/NEXT */
+.dt-footer .paginate_button.disabled {
+  color: #94a3b8 !important;
+  cursor: default;
+}
+
+/* FORCE FLEX LAYOUT */
+#table_volume_wrapper .dt-footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px;
+    margin-top: 14px;
+    padding: 8px 12px;
+    border-top: 1px solid #e5e7eb;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* LEFT GROUP */
+#table_volume_wrapper .dt-footer-left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px;
+}
+
+/* KILL DATATABLE FLOATS */
+#table_volume_wrapper .dataTables_length,
+#table_volume_wrapper .dataTables_info,
+#table_volume_wrapper .dataTables_paginate {
+    float: none !important;
+    text-align: left !important;
+}
+
+/* TEXT FIX */
+#table_volume_wrapper .dataTables_info,
+#table_volume_wrapper .dataTables_length label {
+    font-size: 12px;
+    color: #002d62;
+    margin: 0 !important;
+    white-space: nowrap;
+}
+
+/* DROPDOWN FIX */
+#table_volume_wrapper .dataTables_length select {
+    height: 28px;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* PAGINATION RIGHT */
+#table_volume_wrapper .dataTables_paginate {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px;
+}
+/* FOOTER CONTAINER */
+#table_volume_footer {
+    display: grid !important;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 14px;
+    margin-top: 24px;
+    padding: 8px 12px;
+    border-top: 1px solid #e5e7eb;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* FORCE LEFT ALIGN - Target the footer container */
+#table_volume_footer.dt-footer {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+}
+
+/* Left section container */
+#table_volume_length,
+#table_volume_info {
+    float: none !important;
+    text-align: left !important;
+    margin: 0 !important;
+    order: 1;
+}
+
+/* Right section container */
+#table_volume_paginate {
+    float: none !important;
+    margin: 0 !important;
+    order: 2;
+}
+
+/* Ensure text elements inside left section are left-aligned */
+#table_volume_length label,
+#table_volume_info {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+/* SELECT styling */
+#table_volume_length select {
+    height: 28px;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin: 0 4px !important;
+}
+
+/* Clean text */
+#table_volume_length label,
+#table_volume_info {
+    font-size: 12px;
+    color: #002D62;
+    white-space: nowrap;
+}
+
+/* If you want to ensure the pagination is on the right */
+#table_volume_paginate {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px;
+}
+/* Footer layout */
+#table_volume_footer.dt-footer {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between; /* ⬅ left / right split */
+  gap: 16px;
+  margin-top: 14px;
+  padding: 8px 12px;
+  border-top: 1px solid #e6eaf0;
+}
+
+/* LEFT SIDE: length + info */
+#table_volume_footer .dataTables_length,
+#table_volume_footer .dataTables_info {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #002D62;
+
+}
+
+/* Wrap left items together */
+#table_volume_footer .dataTables_length {
+  margin-right: 8px;
+  margin-top:10px;
+}
+
+/* RIGHT SIDE: pagination */
+#table_volume_footer .dataTables_paginate {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto; /* 🔥 pushes pagination to right */
+}
+
+
+.dataTables_paginate .paginate_button {
+    color:#002D62 !important; 
+}
+.paginate_button.previous {
+    color:#002D62 !important;
+}
+.next {color:#002D62 !important; 
+}
+#table_volume_filter  input {
+    padding: 4px 10px 4px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #E3E3E3;
+    font-size: 12px;
+    width: 250px;
+    color: #6C757D;
+    height: 28px;
+    font-weight: 500;
+}
+/* Hide only the Search label text */
+#table_volume_filter label {
+  font-size: 0;
+}
+
+/* Restore input font-size */
+#table_volume_filter input {
+  font-size: 12px;
+}
+/* Footer layout */
+#table_volume_footer.dt-footer {
+  display: flex !important;
+  align-items: center;
+}
+
+/* FORCE length + info to the LEFT */
+#table_volume_length,
+#table_volume_info {
+  order: 1;
+  margin-right: 12px;
+}
+
+/* PUSH pagination to the RIGHT */
+#table_volume_paginate {
+  margin-left: auto !important;
+  order: 2;
+}
+#table_volume_footer .dataTables_length  {
+    margin-top: 10px !important;
+}
+/* Optional polish */
+#table_volume_info {
+  font-size: 12px;
+  color: #64748b;
+  white-space: nowrap;
+}
+.rowOn {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
+}
+/* Increase vertical padding for horizontal tabs */
+.tab-bottom td {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+/* Optional: better click area + alignment */
+.tab-bottom td a {
+  display: inline-block;
+  padding: 2px 6px;
+}
+.jstree-node.has-sub-menu > a.jstree-anchor::after {
+    float: right;
+    color: #00B4FF;
+    font-family: FontAwesome;
+    content: "\f078";
+    font-size: 10px;
+    margin-left: 10px;
+}
+#jstree_demo_div .fa {
+    display: none;
+    font-size: 15px;
+    color: #ffffff ! IMPORTANT;
+}
+.breadcrumb .logout-button {
+    margin-left: -5px;
+}
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+     </style>
+ 
+     <script type="text/javascript">
+        
+         var usb_encryption_failure = ""; var vol_delete_names = "";
+ var errors="";
+ 
+ var startUpFocusOn;
+ function startUp(){
+     if(errors.length > 0){
+         // alert("");
+         if((errors.indexOf('Two Factor Authentication Code') >= 0) && document.modifyForm.tfa_auth_code){
+             startUpFocusOn = document.modifyForm.tfa_auth_code;
+         }
+         newConfirmAlertPopupHTML("alert_errors", "", "","error");
+         event.preventDefault();
+         return false;
+     }
+ }
+ 
+ $(document).on("click", '.alert_errors', function(){
+     $(this).removeClass('alert_errors');
+     $(".background-section").hide('slow');
+     $('.popup_box').hide('slow');
+     if(startUpFocusOn){
+         startUpFocusOn.focus();
+     }
+ });
+ 
+ function makeOnline(){
+     if(usb_encryption_failure != ""){
+         // alert(usb_encryption_failure);
+         newConfirmAlertPopupHTML("alert_usb_encryption_failure", usb_encryption_failure, "","");
+         event.preventDefault();
+         return false;
+ 	    /*document.location="/StoneFly/bin/ff_admin.pl";
+ 	    return false;*/
+     }else{
+         disableAllButtons("make_online");
+         document.modifyForm.make_volumes_online.value="true";
+ 	    document.modifyForm.submit();
+ 	    return true;
+     }
+ }
+ 
+ 
+ function disableAllButtons(button_name){
+     var elems = document.modifyForm.elements;
+     var i = 0;
+     for(i=0;i < elems.length; i++){
+         if (elems[i].type == "button"){
+             elems[i].disabled = "true";
+             if(button_name){
+                 if (elems[i].name == button_name){
+                     elems[i].value="Executing, please wait ...";
+                 }
+             }
+        }
+        if (elems[i].type == "reset"){
+            elems[i].disabled = "true";
+            if(button_name){
+                if (elems[i].name == button_name){
+                    elems[i].value="Executing, please wait ...";
+                }
+            }
+        }
+        if (elems[i].type == "submit"){
+            elems[i].disabled = "true";
+            if(button_name){
+                if (elems[i].name == button_name){
+                    elems[i].value="Executing, please wait ...";
+                }
+            }
+        }
+    }
+ }
+ 
+ function checkValues() {
+     var deletingSome;
+     var deletingEncrypted;
+     var oTable = $('#table_volume').DataTable();
+     var rowCollection = oTable.$(".delete-checkbox:checked",{"page":"all"});
+     rowCollection.each(function(index, elem){
+         deletingSome = true;
+         var value = $(elem).val();
+         if(value.indexOf("encrypted") >= 0){
+             deletingEncrypted = true;
+             return false; // Just exit the 'each' loop.
+         }
+     });
+ 
+     if( deletingSome ){
+         if( deletingEncrypted && usb_encryption_failure != ""){
+             // alert(usb_encryption_failure);
+             newConfirmAlertPopupHTML("alert_usb_encryption_failure", usb_encryption_failure, "","");
+             event.preventDefault();
+             return false;
+ 	        /*document.location="/StoneFly/bin/ff_admin.pl";
+ 	        return false;*/
+         }else{
+             var form = $('form[name="modifyForm"]');
+             rowCollection.each(function(index, elem){
+                 var value = $(elem).val();
+                 // Create a hidden element
+                 // Have to return the checked for deletion to CGI
+                 // because CGI has to re-fresh the screen and set the same
+                 // checked objects as it was before.
+                 $(form).append(
+                     $('<input>')
+                         .attr('type', 'hidden')
+                         .attr('name', 'delete')
+                         .val(value)
+                 );
+             });
+             disableAllButtons("add_host");
+             document.modifyForm.submit();
+             return true;
+         }
+     }else{
+         return false;
+     }
+  }
+ 
+ function trueSubmit(){
+     if(false || false){
+         // alert("Deleting these volumes permanently removes them from the database and may significantly affect the SAN.\n\n\n");
+         newConfirmAlertPopupHTML("alert_hostList", "Deleting these volumes permanently removes them from the database and may significantly affect the SAN.\n\n\n", "","");
+         event.preventDefault();
+         return false;
+     }else{
+         if(vol_delete_names){
+             var string = "Do you want to delete the following volumes:\n\n{0}";
+             string = string.replace("{0}", vol_delete_names);
+             newConfirmAlertPopupHTML("confirm_string", string, "","");
+             event.preventDefault();
+             return false;
+       
+         }
+     }
+ }
+ 
+ $(document).on("click", '.alert_usb_encryption_failure', function(){
+     $(this).removeClass('alert_usb_encryption_failure');
+     $(".background-section").hide('slow');
+     $('.popup_box').hide('slow');
+     document.location="/StoneFly/bin/ff_admin.pl";
+     return false;
+ 
+ });
+ 
+ $(document).on("click", '.alert_hostList', function(){
+     $(this).removeClass('alert_hostList');
+     $(".background-section").hide('slow');
+     $('.popup_box').hide('slow');
+ 
+ 
+ });
+ 
+ $(document).on("click", '.confirm_string', function(){
+     $(this).removeClass('confirm_string');
+     $(".background-section").hide('slow');
+     $('.popup_box').hide('slow');
+ 
+     newConfirmAlertPopupHTML("confirm_hostList_confirm_2", "Deleting these volumes permanently removes them from the database and may significantly affect the SAN.\n\n\n"+"Do you want to continue?", "","question");
+     event.preventDefault();
+     return false;
+ 
+ });
+ 
+ $(document).on("click", '.confirm_hostList_confirm_2', function(){
+     $(this).removeClass('confirm_hostList_confirm_2');
+     $(".background-section").hide('slow');
+     $('.popup_box').hide('slow');
+ 
+     var form = $('form[name="modifyForm"]');
+     var oTable = $('#table_volume').DataTable();
+     var rowCollection = oTable.$(".delete-checkbox:checked",{"page":"all"});
+     rowCollection.each(function(index, elem){
+         var value = $(elem).val();
+         $(form).append(
+             $('<input>')
+                 .attr('type', 'hidden')
+                 .attr('name', 'delete')
+                 .val(value)
+         );
+     });
+     disableAllButtons("add_host");
+     document.modifyForm.confirmed.value="true";
+     document.modifyForm.submit();
+ 
+ 
+ });
+
+     </script>
+ <script>
+$(document).ready(function () {
+
+  const wrapper = $('#table_volume_wrapper');
+
+  if (!$('#table_volume_footer').length) {
+    wrapper.append(`
+      <div id="table_volume_footer" class="dt-footer">
+        <div class="dt-footer-left"></div>
+      </div>
+    `);
+  }
+
+  $('#table_volume_length').appendTo('.dt-footer-left');
+  $('#table_volume_info').appendTo('.dt-footer-left');
+  $('#table_volume_paginate').appendTo('#table_volume_footer');
+
+});
+</script>
+ 
+     <script type="text/javascript">
+         <!--//--><![CDATA[//><!--
+ 
+         function set_myhideable(value) {
+             if (navigator.appName.indexOf("Microsoft Internet") >= 0) {
+                 if (document.all && document.all.myhideable) {
+                     var elems = document.all.myhideable;
+                     //alert("length="+elems.length);
+                     for (i = 0; i < elems.length; i++) {
+                         elems[i].style.visibility = value;
+                         //document.writeln("visible="+value);
+                     }
+                 }
+             }
+         }
+ 
+ 
+         /*$(document).on('click','.theme-color',function(){
+             var themeColor = $(this).attr('data-style');
+             $.ajax({
+                url: '../perl/lib/themeChange.pl',
+                method: 'POST',
+                data: {themeColor: themeColor},
+                success: function(){
+ 
+                },
+             });
+         });*/
+ 
+         function changeCSS(cssFile, cssLinkIndex) {
+             if(cssFile.includes('light.css') == true){
+                 $(".theme-color").removeClass('active');
+                 $(".color-light").addClass("active");
+                 localStorage.themeOption = 0; //light theme
+             }
+             else{
+                 $(".theme-color").removeClass('active');
+                 $(".color-darkblue").addClass("active");
+                 localStorage.themeOption = 1; //dark theme
+             }
+             var oldlink = document.getElementsByClassName("changeCss").item(cssLinkIndex);
+             var newlink = document.createElement("link");
+             newlink.setAttribute("rel", "stylesheet");
+             newlink.setAttribute("type", "text/css");
+             newlink.setAttribute("class", "changeCss");
+             newlink.setAttribute("href", cssFile);
+             document.getElementsByTagName("head").item(cssLinkIndex).appendChild(newlink);
+         }
+         function goto_(value, extra) {
+             //take off /StoneFly/bin/
+             value = value.substring(14);
+             if (extra != null && extra != "") {
+                 document.location = "/StoneFly/bin/redirect.pl?redirect_file=" + value + "&" + extra;
+             } else {
+                 document.location = "/StoneFly/bin/redirect.pl?redirect_file=" + value;
+             }
+         }
+         sfHover = function() {
+             var nav;
+             var t;
+             var array = new Array("nav_volumes","nav_hosts","nav_sessions","nav_resources","nav_nas","nav_system","nav_users","nav_reports");
+             for (t = 0; t < array.length; t++) {
+                 nav = array[t];
+                 var elem = document.getElementById(nav);
+                 var ok = true;
+                 if (elem == null) {
+                     ok = false;
+                 }
+                 if (ok) {
+                     var sfEls = document.getElementById(nav).getElementsByTagName("LI");
+                     for (var i = 0; i < sfEls.length; i++) {
+                         sfEls[i].onmouseover = function() {
+                             this.className += " sfhover";
+                             set_myhideable("hidden");
+                         }
+                         sfEls[i].onmouseout = function() {
+                             this.className = this.className.replace(new RegExp(" sfhover\\b"), "");
+                             set_myhideable("visible");
+                         }
+                     }
+                 }
+                 ok = true;
+                 var elem = document.getElementById(nav + "selected");
+                 if (elem == null) {
+                     ok = false;
+                 }
+                 if (ok) {
+                     var sfEls = document.getElementById(nav + "selected").getElementsByTagName("LI");
+                     for (var i = 0; i < sfEls.length; i++) {
+                         sfEls[i].onmouseover = function() {
+                             this.className += " sfhover";
+                             set_myhideable("hidden");
+                         }
+                         sfEls[i].onmouseout = function() {
+                             this.className = this.className.replace(new RegExp(" sfhover\\b"), "");
+                             set_myhideable("visible");
+                         }
+                     }
+                 }
+             }
+         }
+         function logout() {
+             // Must provide a varying dummy parameter to stop MS Edge from caching the page and no CGI and so no logout.
+             window.location = "/StoneFly/bin/logout.pl?nocache=" + (new Date()).getTime();
+         }
+ 
+         if (window.attachEvent) window.attachEvent("onload", sfHover);
+ 
+         //--><!]]>
+     </script>
+ 
+     <style>
+         .cke {
+             visibility: hidden;
+         }
+     </style>
+ 
+ <!-- <link rel="stylesheet" type="text/css" class="changeCss" href="https://50.215.24.115/StoneFly/presentation/stonefly/css/dark.css"><link type="text/css" rel="stylesheet" href="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/css/mcafee_fonts.css"></head> -->
+ 
+ <body cz-shortcut-listen="true">
+ 
+     <div class="background-section" style="display: none;">
+         <div class="popup_box" style="display: none;">
+             <div class="header">
+                 <label class="header-section" style="">50.215.24.115 says</label>
+             </div>
+             <img class="alert-icon" src="https://50.215.24.115/StoneFly/bin/lv_summary.pl?object_id=">
+             <h1 class="title-section"></h1>
+            <div class="sub-text-section os-tabs-w-alert">
+                <label class="sub-title-section"></label>
+            </div>
+             <div class="btns">
+                 <button id="confirm-btn" class="confirm-btn">Ok</button>
+                 <button id="cancel-btn" class="cancel-btn">Cancel</button>
+             </div>
+         </div>
+     </div>
+ 
+ <div class="loading" id="custom_loading" style="display: none;">Loading…</div>
+ 
+     <div class="all-wrapper all-wrapper-dashboard menu-side with-side-panel">
+         <div class="layout-w">
+             <div class="menu-mobile menu-activated-on-click color-scheme-dark">
+                 <div class="mm-logo-buttons-w">
+                     <div class="mm-buttons">
+                         <div class="content-panel-open">
+                             <div class="os-icon os-icon-grid-circles"></div>
+                         </div>
+                         <div class="mobile-menu-trigger">
+                             <div class="os-icon os-icon-hamburger-menu-1"></div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="menu-and-user">
+                     <div class="logged-user-w">
+                         <div class="avatar-w"><img alt="" src="https://50.215.24.115/StoneFly/presentation/stonefly/stonefly-logo-white.png"></div>
+                         <div class="logged-user-info-w">
+                             <div class="logged-user-role">SC-50-215-24-115</div>
+                             <div class="logged-user-name">auddin</div>
+                             <div class="logged-user-role">ADMINISTRATOR</div>
+                         </div>
+                     </div>
+ 
+                     <!-- START - Mobile Menu List -->
+                     <ul class="main-menu">
+                         <li>
+ 
+ 
+                                   <!--<i class="fa fa-tachometer"></i>-->
+                                 <a href="https://50.215.24.115/StoneFly/bin/new_home.pl">SAN Summary</a>
+ 
+                         </li>
+                         <li class="has-sub-menu">
+                             <a href="https://50.215.24.115/StoneFly/bin/lv_summary.pl?object_id=#">
+                                 <div class="icon-w">
+                                     <i class="right"></i>
+                                 </div><span>SAN</span></a>
+                             <ul class="sub-menu">
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/lv_summary.pl?">Volumes</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/host_summary.pl?">Host</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/sessions.pl">Sessions</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/ff_target_portals.pl">Target Portals</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/fibre_chan.pl">Fibre Channels</a></li>
+                             </ul>
+                         </li>
+                         <li class="has-sub-menu">
+                             <a href="https://50.215.24.115/StoneFly/bin/lv_summary.pl?object_id=#">
+                                 <div class="icon-w">
+                                     <i class="right"></i>
+                                 </div><span>NAS</span></a>
+                             <ul class="sub-menu">
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/nas_volume_summary.pl?">Volumes</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/cifs_users_access.pl?object_id=">CIFS Users</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/nas_sessions.pl">NAS Sessions</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/nas_segments_summary.pl?object_id=">Segments</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/nas_nodes.pl">Scale Out</a></li>
+                             </ul>
+                         </li>
+                         <li class="has-sub-menu">
+                             <a href="https://50.215.24.115/StoneFly/bin/lv_summary.pl?object_id=#">
+                                 <div class="icon-w">
+                                    <i class="right"></i>
+                                 </div><span>Resources</span></a>
+                             <ul class="sub-menu">
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/resources_summary.pl">Summary</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/resources_detail.pl">Detail</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/flash_cache_create.pl">Create Flash Cache</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/flash_cache_general.pl">Flash Cache Configuration</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/create_object_storage.pl">Create Object Storage</a></li>
+                             </ul>
+                         </li>
+                         <li class="has-sub-menu">
+                             <a href="https://50.215.24.115/StoneFly/bin/lv_summary.pl?object_id=#">
+                                 <div class="icon-w">
+                                     <i class="right"></i>
+                                 </div><span>System</span></a>
+                             <ul class="sub-menu">
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/ff_info.pl">Information</a></li>
+                     <!--
+                                 <li><a href="/StoneFly/bin/update_8_3j.pl">Finish Software Update</a></li>
+                     -->
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/ff_admin.pl">Admin</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/ff_network.pl">Network</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/ff_diagnostics.pl">Diagnostics</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/ff_notifications.pl">Notifications</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/ff_ups.pl">UPS</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/users.pl">Users</a></li>
+                             </ul>
+                         </li>
+                         <li class="has-sub-menu">
+                             <a href="https://50.215.24.115/StoneFly/bin/lv_summary.pl?object_id=#">
+                                 <div class="icon-w">
+                                     <i class="right"></i>
+                                 </div><span>Report</span></a>
+                             <ul class="sub-menu">
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/fflog.pl?">Log</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/config_report.pl">Configuration Report</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/statistics_report.pl">Statistics</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/debug.pl">Debug Logs</a></li>
+                             </ul>
+                         </li>
+ 
+                     </ul>
+                     <!-- END - Mobile Menu List -->
+ 
+                 </div>
+             </div>
+             <!-- START - Menu side -->
+             <div class="desktop-menu menu-side-w menu-activated-on-click">
+                 <div class="" style="       background: #002D62;margin: 0;border: 1px solid #002D62;border-bottom: 0;">
+ 
+                     <div class="logo-w row">
+                         <div class="col-md-12">
+                             <a class="logo" href="https://50.215.24.115/StoneFly/bin/new_home.pl"><img src="images/logo.gif"></a>
+                             <div class="logged-user-w">
+                                 <div class="logged-user-i">
+                                     <div class="logged-user-info-w">
+                                         <a class="logged-user-role" href="https://50.215.24.115/StoneFly/bin/new_home.pl">SC-50-215-24-115</a>
+                                         <div class="logged-user-name">auddin</div>
+                                         <a class="logged-user-role logged-user-role1" href="https://50.215.24.115/StoneFly/bin/new_home.pl">ADMINISTRATOR</a>
+                                     </div>
+                                     <!--<div class="logged-user-menu">-->
+                                     <!--<div class="logged-user-avatar-info">-->
+                                     <!--<div class="avatar-w"><img alt="" src="/StoneFly/presentation/stonefly/stobadge-1.png"></div>-->
+                                     <!--<div class="logged-user-info-w">-->
+                                     <!--<div class="logged-user-name">auddin</div>-->
+                                     <!--<div class="logged-user-role">ADMINISTRATOR</div>-->
+                                     <!--</div>-->
+                                     <!--</div>-->
+                                     <!--<div class="bg-icon"><i class="os-icon os-icon-wallet-loaded"></i></div>-->
+                                     <!--<ul>-->
+                                     <!---->
+                                     <!--<li><a onclick="window.location.href='/StoneFly/bin/logout.pl'"><i class="os-icon os-icon-signs-11"></i><span>Logout</span></a></li>-->
+                                     <!--</ul>-->
+                                     <!--</div>-->
+                                 </div>
+                             </div>
+                         </div>
+ 
+                     </div>
+                 </div>
+                 <div class="row">
+                 <div class="col-md-6">
+ 
+                 </div>
+                 <div class="col-md-6">
+                     <ul class="menu-btns">
+                         <li class="exp-button-container">
+                             <button class="exp btn btn-main" id="expand"><i class="fa fa-expand" aria-hidden="true"></i> Expand All</button>
+                             <button class="exp btn btn-main" id="collapse"><i class="fa fa-compress" aria-hidden="true"></i> Collapse All</button>
+                         </li>
+                     </ul>
+                 </div>
+                 </div>
+ 
+                 <div class="menu-and-user">
+ 
+                     <div id="jstree_demo_div" class="jstree jstree-1 jstree-default" role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="j1_2" aria-busy="false"><ul class="jstree-container-ul jstree-children jstree-wholerow-ul jstree-no-dots" role="group"><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-tachometer&quot;}" aria-selected="false" aria-level="1" aria-labelledby="j1_1_anchor" id="j1_1" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://50.215.24.115/StoneFly/bin/new_home.pl" tabindex="-1" id="j1_1_anchor"><i class="jstree-icon jstree-themeicon fa fa-tachometer jstree-themeicon-custom" role="presentation"></i>
+                                 <strong>Dashboard</strong></a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-database&quot;}" aria-selected="false" aria-level="1" aria-labelledby="j1_2_anchor" aria-expanded="true" id="j1_2" class="jstree-node has-sub-menu parent jstree-open"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="j1_2_anchor"><i class="jstree-icon jstree-themeicon fa fa-database jstree-themeicon-custom" role="presentation"></i>SAN</a><ul role="group" class="jstree-children"><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-hdd-o&quot;}" aria-selected="false" aria-level="2" aria-labelledby="nav_volumes_anchor" aria-expanded="true" id="nav_volumes" class="jstree-node has-sub-menu jstree-open"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="nav_volumes_anchor"><i class="jstree-icon jstree-themeicon fa fa-hdd-o jstree-themeicon-custom" role="presentation"></i>Volumes</a><ul role="group" class="jstree-children"><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-list fa-sub&quot;}" aria-selected="true" aria-level="3" aria-labelledby="j1_4_anchor" id="j1_4" class="jstree-node jstree-leaf active"><div unselectable="on" role="presentation" class="jstree-wholerow jstree-wholerow-clicked">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor jstree-clicked" href="https://50.215.24.115/StoneFly/bin/lv_summary.pl?object_id=" tabindex="-1" id="j1_4_anchor"><i class="jstree-icon jstree-themeicon fa fa-list fa-sub jstree-themeicon-custom" role="presentation"></i>Summary</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-hdd-o fa-sub&quot;}" aria-selected="false" aria-level="3" aria-labelledby="j1_5_anchor" id="j1_5" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://50.215.24.115/StoneFly/bin/replication_summary.pl?object_id=" tabindex="-1" id="j1_5_anchor"><i class="jstree-icon jstree-themeicon fa fa-hdd-o fa-sub jstree-themeicon-custom" role="presentation"></i>Replication Summary</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-plus fa-sub&quot;}" aria-selected="false" aria-level="3" aria-labelledby="j1_6_anchor" aria-expanded="false" id="j1_6" class="jstree-node has-sub-menu jstree-closed"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="j1_6_anchor"><i class="jstree-icon jstree-themeicon fa fa-plus fa-sub jstree-themeicon-custom" role="presentation"></i>
+ 
+                                         Create New Volume
+                                        </a></li><li role="treeitem" aria-selected="false" aria-level="3" aria-labelledby="j1_12_anchor" id="j1_12" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://50.215.24.115/StoneFly/bin/lv_dedup_create.pl?object_id=" tabindex="-1" id="j1_12_anchor"><i class="jstree-icon jstree-themeicon" role="presentation"></i>Create Deduplicated Volume</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-wrench fa-sub&quot;}" aria-selected="false" aria-level="3" aria-labelledby="j1_13_anchor" aria-expanded="false" id="j1_13" class="jstree-node has-sub-menu jstree-closed"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" cellpadding="1" id="j1_13_anchor"><i class="jstree-icon jstree-themeicon fa fa-wrench fa-sub jstree-themeicon-custom" role="presentation"></i>Configure Volume</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-folder fa-sub&quot;}" aria-selected="false" aria-level="3" aria-labelledby="j1_30_anchor" id="j1_30" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://50.215.24.115/StoneFly/bin/lv_detail.pl?object_id=" tabindex="-1" id="j1_30_anchor"><i class="jstree-icon jstree-themeicon fa fa-folder fa-sub jstree-themeicon-custom" role="presentation"></i>Volume Detail</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-lock fa-sub&quot;}" aria-selected="false" aria-level="3" aria-labelledby="j1_31_anchor" aria-expanded="false" id="j1_31" class="jstree-node has-sub-menu jstree-closed jstree-last"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="j1_31_anchor"><i class="jstree-icon jstree-themeicon fa fa-lock fa-sub jstree-themeicon-custom" role="presentation"></i>Volume Security</a></li></ul></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-user&quot;}" aria-selected="false" aria-level="2" aria-labelledby="nav_hosts_anchor" aria-expanded="true" id="nav_hosts" class="jstree-node has-sub-menu jstree-open"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="nav_hosts_anchor"><i class="jstree-icon jstree-themeicon fa fa-user jstree-themeicon-custom" role="presentation"></i>Host</a><ul role="group" class="jstree-children" style=""><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-list fa-sub&quot;}" aria-selected="false" aria-level="3" aria-labelledby="j1_38_anchor" id="j1_38" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://50.215.24.115/StoneFly/bin/host_summary.pl?" tabindex="-1" id="j1_38_anchor"><i class="jstree-icon jstree-themeicon fa fa-list fa-sub jstree-themeicon-custom" role="presentation"></i>Summary</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-folder fa-sub&quot;}" aria-selected="false" aria-level="3" aria-labelledby="j1_39_anchor" id="j1_39" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://50.215.24.115/StoneFly/bin/host_detail.pl?" tabindex="-1" id="j1_39_anchor"><i class="jstree-icon jstree-themeicon fa fa-folder fa-sub jstree-themeicon-custom" role="presentation"></i>Detail</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-file-text fa-sub&quot;}" aria-selected="false" aria-level="3" aria-labelledby="j1_40_anchor" id="j1_40" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://50.215.24.115/StoneFly/bin/host_security.pl?" tabindex="-1" id="j1_40_anchor"><i class="jstree-icon jstree-themeicon fa fa-file-text fa-sub jstree-themeicon-custom" role="presentation"></i>Host Access</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-plus fa-sub&quot;}" aria-selected="false" aria-level="3" aria-labelledby="j1_41_anchor" id="j1_41" class="jstree-node  jstree-leaf jstree-last"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://50.215.24.115/StoneFly/bin/host_add.pl?" tabindex="-1" id="j1_41_anchor"><i class="jstree-icon jstree-themeicon fa fa-plus fa-sub jstree-themeicon-custom" role="presentation"></i>Add New Host</a></li></ul></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-reorder&quot;}" aria-selected="false" aria-level="2" aria-labelledby="nav_sessions_anchor" id="nav_sessions" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://50.215.24.115/StoneFly/bin/sessions.pl" tabindex="-1" id="nav_sessions_anchor"><i class="jstree-icon jstree-themeicon fa fa-reorder jstree-themeicon-custom" role="presentation"></i>Sessions</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-arrows fa-sub&quot;}" aria-selected="false" aria-level="2" aria-labelledby="j1_43_anchor" aria-expanded="false" id="j1_43" class="jstree-node has-sub-menu jstree-closed"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="j1_43_anchor"><i class="jstree-icon jstree-themeicon fa fa-arrows fa-sub jstree-themeicon-custom" role="presentation"></i>Target Portals </a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-circle fa-sub&quot;}" aria-selected="false" aria-level="2" aria-labelledby="j1_47_anchor" id="j1_47" class="jstree-node  jstree-leaf jstree-last"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://50.215.24.115/StoneFly/bin/fibre_chan.pl" tabindex="-1" id="j1_47_anchor"><i class="jstree-icon jstree-themeicon fa fa-circle fa-sub jstree-themeicon-custom" role="presentation"></i>Fibre&nbsp;Channel</a></li></ul></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-tasks&quot;}" aria-selected="false" aria-level="1" aria-labelledby="nav_nas_anchor" aria-expanded="false" id="nav_nas" class="jstree-node has-sub-menu parent jstree-closed"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="nav_nas_anchor"><i class="jstree-icon jstree-themeicon fa fa-tasks jstree-themeicon-custom" role="presentation"></i>
+                             NAS</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-cog&quot;}" aria-selected="false" aria-level="1" aria-labelledby="nav_resources_anchor" aria-expanded="false" id="nav_resources" class="jstree-node has-sub-menu parent jstree-closed"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="nav_resources_anchor"><i class="jstree-icon jstree-themeicon fa fa-cog jstree-themeicon-custom" role="presentation"></i>Resources</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-desktop&quot;}" aria-selected="false" aria-level="1" aria-labelledby="nav_system_anchor" aria-expanded="false" id="nav_system" class="jstree-node has-sub-menu parent jstree-closed"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="nav_system_anchor"><i class="jstree-icon jstree-themeicon fa fa-desktop jstree-themeicon-custom" role="presentation"></i>System</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-file-text-o&quot;}" aria-selected="false" aria-level="1" aria-labelledby="nav_reports_anchor" aria-expanded="false" id="nav_reports" class="jstree-node has-sub-menu parent jstree-closed jstree-last"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="nav_reports_anchor"><i class="jstree-icon jstree-themeicon fa fa-file-text-o jstree-themeicon-custom" role="presentation"></i>Reports</a></li></ul></div>
+                 </div>
+             </div>
+             <!-- END - Menu side -->
+ 
+             <!-- START - Mobile Menu -->
+ 
+             <!-- END - Mobile Menu -->
+ 
+             <div class="content-w">
+                 <!-- START - Breadcrumbs -->
+                 <ul class="breadcrumb alert">
+                      <div style="display: flex; align-items: center; float: left; margin-left: 20px;">
+                        <img class="mr-2" id="toggleSidebar" src="images/menu-icon.webp" width="30px" style="vertical-align: middle;">
+                        <div style="font-weight: 600;color: #002D62;font-family: Poppins, sans-serif;line-height: normal;margin-left: 10px;font-size: 18px;">
+                            SAN Summary
+                        </div>
+                    </div>
+                     <!--
+                     <li align=center nowrap class="loginCellTitle license-banner" style="padding: 3px 12px;border-radius: 10px;background-color:CC0000"><a href="/StoneFly/bin/update_8_3j.pl" style="text-decoration:underline; color:#FFFFFF"><b>Finish Software Update</b></a></li>
+                     -->
+                     <!--
+                     <li align=center nowrap class="loginCellTitle license-banner" style="padding: 3px 12px;border-radius: 10px;background-color:$mainlicensebgcolor"><a href="/StoneFly/bin/ff_license.pl" style="text-decoration:underline; color:#FFFFFF"><b>$mainlicensemsg</b></a></li>
+                     -->
+                     <li>
+                         <h5 style="font-size: 16px;    font-weight: 400;color:#002D62;    margin-left: 20px;font-family: Poppins;"><b>Status : </b>&nbsp; &nbsp;<span><a href="javascript:document.logForm.submit();">
+                             <img src="images/stat-alert_en_US (1).gif" border="0" style="width: 92px;" alt=""></a>
+                         </span></h5>
+                     </li>
+ 
+                     <li>
+                         <a href="https://50.215.24.115/StoneFly/bin/support.pl" class="btn support">Support</a>
+                     </li>
+                     <li><span style="color: transparent;border-right: 1px solid #ccc;background: transparent;margin: 0 12px;font-size: 15px;"></span></li>
+                     <li><img src="images/logout.png.png">
+                        <a class="logout-button" href="javascript:void(0);" onclick="javascript:logout();">
+ <!--                        <i class="fa fa-sign-out" aria-hidden="true"></i> -->
+                         <img src="https://50.215.24.115/StoneFly/presentation/stonefly/logout.png" style="width: 23px;margin-right: 5px;" border="0" alt=""> Logout</a></li>
+                     <!--<li><a href="javascript:void(0);" onclick="window.location.href='/StoneFly/bin/logout.pl'"><i class="fa fa-power-off logout-icon" aria-hidden="true"></i></a></li>-->
+                 </ul>
+ 
+ 
+                 <div class="content-panel-toggler" style="display: none;">
+                     <i class="os-icon os-icon-grid-squares-22"></i><span>Sidebar</span></div>
+                 <div class="content-i">
+ 
+                     <script language="JavaScript" type="text/javascript"> <!--
+ 
+ function displayHelpWindow(helpFileName, title, w, h) {
+ 	var left = (screen.width - 700) / 2;
+ 	var top = (screen.height - 600) / 4;  // for 25% - divide by 4  |  for 33% - divide by 3
+ 	newWindow = window.open("/StoneFly/bin/misc.pl?page=help/" + helpFileName, "Help", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=no, width=700, height=600, top=" + top + ", left=" + left);
+ 	newWindow.focus();
+ }
+ 
+ // -->
+ </script>
+ <style>
+    .tab-content-section {
+  display: none;
+}
+.tab-content-section.active {
+  display: block;
+}
+
+ </style>
+ <form name="modifyForm" class="volume-summary-delete-form" method="POST">
+     <input type="hidden" name="page" value="volume_summary.html">
+     <input type="hidden" name="confirmed" value="false">
+     <input type="hidden" name="make_volumes_online" value="false">
+     <input type="hidden" name="all" value="">
+     <input type="hidden" name="force" value="">
+     <input type="hidden" name="usb_status" value="0">
+     <!--
+     <input type="hidden" name="tfa_authorized" value="$tfa_authorized">
+     -->
+ 
+     <div>
+         <ul class="help">
+             <li onclick="javascript:displayHelpWindow(&#39;volume_summary_help.html&#39;);"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</li>
+         </ul>
+     </div>
+ 
+     <div class="content-i">
+         <div class="content-box">
+             <!--START - Control panel above projects-->
+                <div class="os-tabs-w mx-4 tabs-pad">
+                 <div class="os-tabs-controls">
+                     <ul class="nav nav-tabs upper">
+                         <li class="nav-item"><a aria-expanded="false" class="nav-link active ver_volumes" data-toggle="tab" data-tab="volumes"  href="https://50.215.24.115/StoneFly/bin/lv_summary.pl?object_id=">Volumes</a></li>
+                         <li class="nav-item"><a aria-expanded="false" class="nav-link ver_host" data-toggle="tab" data-tab="host" href="https://50.215.24.115/StoneFly/bin/host_summary.pl?">Host</a></li>
+                         <li class="nav-item"><a aria-expanded="false" class="nav-link ver_session" data-toggle="tab" data-tab="sessions" href="https://50.215.24.115/StoneFly/bin/sessions.pl">Sessions</a></li>
+                         <li class="nav-item"><a aria-expanded="false" class="nav-link ver_target_portal" data-toggle="tab" data-tab="target" href="https://50.215.24.115/StoneFly/bin/ff_target_portals.pl">Target Portals</a></li>
+                         <li class="nav-item"><a aria-expanded="false" class="nav-link ver_fiber_channel" data-toggle="tab" data-tab="fiber" href="https://50.215.24.115/StoneFly/bin/fibre_chan.pl">Fibre Channel</a></li>
+                     </ul>
+                 </div>
+             </div>
+ 
+             <script language="JavaScript" type="text/javascript"> <!--
+ 
+ function displayHelpWindow(helpFileName, title, w, h) {
+ 	var left = (screen.width - 700) / 2;
+ 	var top = (screen.height - 600) / 4;  // for 25% - divide by 4  |  for 33% - divide by 3
+ 	newWindow = window.open("/StoneFly/bin/misc.pl?page=help/" + helpFileName, "Help", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=no, width=700, height=600, top=" + top + ", left=" + left);
+ 	newWindow.focus();
+ }
+ 
+ // -->
+ </script>
+
+ 
+             <div class="element-box full-width">
+                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                     <tbody><tr>
+                         
+</tr></tbody></table><table width="100%" summary="tabmenu" cellspacing="0" border="0">
+
+<tbody><tr>
+
+<td>
+
+<table width="100%" summary="title" cellspacing="1" cellpadding="5" border="0">
+
+<tbody><tr>
+
+<td width="880" align="center" style="font-weight:bold" class="topnavDisplayhide">
+Volume Management - Summary
+</td>
+
+
+<td align="center" class="topnavDisplayhide" onclick="javascript:displayHelpWindow(&#39;volume_summary_help.html&#39;);">
+<i class="fa fa-question-circle" aria-hidden="true"></i> Help
+</td>
+
+</tr>
+
+</tbody></table>
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+<table width="100%" summary="tabmenu" cellspacing="1" cellpadding="10" class="tab-bottom" border="0">
+
+<tbody><tr>
+
+<td width="14%" align="CENTER" class="tab-style-active">
+<a href="https://50.215.24.115/StoneFly/bin/lv_summary.pl">Summary</a>
+</td>
+
+
+<td width="14%" align="CENTER" class="tab-style">
+<a href="https://50.215.24.115/StoneFly/bin/replication_summary.pl">Replication Summary</a>
+</td>
+
+
+<td width="14%" align="CENTER" class="tab-style">
+<a href="https://50.215.24.115/StoneFly/bin/lv_create.pl">Create New Volume</a>
+</td>
+
+
+<td width="14%" align="CENTER" class="tab-style">
+<a href="https://50.215.24.115/StoneFly/bin/lv_dedup_create.pl">Create Deduplicated<br>Volume</a>
+</td>
+
+
+<td width="14%" align="CENTER" class="tab-style">
+<a href="https://50.215.24.115/StoneFly/bin/redirect.pl?redirect_file=lvc_general.pl&amp;object_id=$object_id">Configure Volume</a>
+</td>
+
+
+<td width="14%" align="CENTER" class="tab-style">
+<a href="https://50.215.24.115/StoneFly/bin/lv_detail.pl?object_id=$object_id">Volume Detail</a>
+</td>
+
+
+<td width="14%" align="CENTER" class="tab-style">
+<a href="https://50.215.24.115/StoneFly/bin/redirect.pl?redirect_file=lv_acl.pl?object_id=$object_id">Volume Security</a>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+
+</td>
+
+</tr>
+
+</tbody></table>
+
+                     
+                     
+                        <!-- ===== VOLUME TABLE ===== -->
+<table
+  id="table_volume"
+  class="tableshaddow display"
+  width="100%"
+  cellspacing="1"
+  cellpadding="5"
+  border="0">
+
+  <thead>
+    <tr>
+      <th colspan="9" style="text-align:center;">
+        <b>Volume Summary as of Wed 17 Dec 2025 05:46:49 AM PST</b>
+      </th>
+    </tr>
+    <tr>
+      <th>Volume Name</th>
+      <th>Type</th>
+      <th>Notes</th>
+      <th>Operational State</th>
+      <th>Size (GiB)</th>
+      <th>Snapshots (Reserved)</th>
+      <th>Active Sessions</th>
+      <th>
+        Delete All<br>
+        <input type="checkbox" id="selectAll">
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>async-rep-local</td>
+      <td>Mirror</td>
+      <td>iSCSI Async Rep Local</td>
+      <td>OK</td>
+      <td>10</td>
+      <td>17(1)</td>
+      <td>0/0</td>
+      <td><input type="checkbox" class="delete-checkbox"></td>
+    </tr>
+
+    <tr>
+      <td>custom-shared-test-1</td>
+      <td>Span, NAS segment</td>
+      <td>N/A</td>
+      <td>OK</td>
+      <td>1</td>
+      <td>N/A</td>
+      <td>0</td>
+      <td><input type="checkbox" class="delete-checkbox" disabled></td>
+    </tr>
+
+    <!-- add remaining rows here -->
+  </tbody>
+
+</table>
+
+                         
+                     
+ 
+                     
+ 
+                     
+                         
+                             
+                                 <table border="0" width="100%" cellpadding="5" cellspacing="0">
+                                     <tbody><tr><td class="rowOn" align="center">
+                                             <input class="defaultFormButton btn-main" type="submit" name="add_host" value="Submit" id="submit_delete" onclick="javascript:checkValues();" style=" cursor:pointer; padding:4px; border-style:solid; border-width:0px;" onmouseover=" " onmouseout=" ">
+                                     </td></tr>
+                                     <!--
+                                     <tr><td class=rowOff align=center>
+                                             <input type="text" name="tfa_auth_code" size="12" maxlength="12" AUTOCOMPLETE="off" id="tfa_auth_code" placeholder="TFA Auth Code" value="$tfa_auth_code">
+                                     </td></tr>
+                                     -->
+                                 </tbody></table>
+                             
+                    
+                                     
+ 
+             
+ </div>
+ </div>
+ </div>
+ </form>
+ </div>
+ <div class="tab-content-wrapper">
+
+    <div class="tab-pane active" id="volumes">
+        <!-- Volumes Content -->
+        <h4>Volumes</h4>
+        <div id="volumesContent"></div>
+    </div>
+
+    <div class="tab-pane" id="host">
+        <!-- Host Content -->
+        <h4>Host</h4>
+        <div id="hostContent"></div>
+    </div>
+
+    <div class="tab-pane" id="sessions">
+        <!-- Sessions Content -->
+        <h4>Sessions</h4>
+        <div id="sessionsContent"></div>
+    </div>
+
+    <div class="tab-pane" id="target">
+        <!-- Target Portals Content -->
+        <h4>Target Portals</h4>
+        <div id="targetContent"></div>
+    </div>
+
+    <div class="tab-pane" id="fiber">
+        <!-- Fibre Channel Content -->
+        <h4>Fibre Channel</h4>
+        <div id="fiberContent"></div>
+    </div>
+
+</div>
+
+<script>
+$(document).ready(function () {
+
+  if (!$.fn.DataTable.isDataTable('#table_volume')) {
+    var table = $('#table_volume').DataTable({
+      stateSave: true,
+      orderClasses: false,
+      order: [],
+      lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]]
+    });
+
+    $('#selectAll').on('change', function () {
+      const checked = this.checked;
+      table.$('.delete-checkbox:enabled').prop('checked', checked);
+    });
+  }
+ $('#table_volume_filter input')
+    .attr('placeholder', 'Search volumes...')
+    .addClass('form-control');
+});
+ 
+</script>
+
+ <script>
+$(document).ready(function () {
+
+    $('.os-tabs-controls .nav-link').on('click', function (e) {
+        e.preventDefault(); // 🚫 STOP LINK NAVIGATION
+
+        // Remove active class from all tabs
+        $('.os-tabs-controls .nav-link').removeClass('active');
+
+        // Add active to clicked tab
+        $(this).addClass('active');
+
+        // Hide all tab contents
+        $('.tab-pane').removeClass('active');
+
+        // Show matching tab content
+        var targetTab = $(this).data('tab');
+        $('#' + targetTab).addClass('active');
+    });
+
+});
+</script>
+
+
+ 
+                     <!--<td valign=top></td>-->
+ 
+                     <!-- START - Sidebar -->
+
+                     <form name="logForm" method="post" action="https://50.215.24.115/StoneFly/bin/fflog.pl">
+                         <input type="hidden" name="severity_limit" value="MIN_ERR_MSG_SEVERITY">
+                         <input type="hidden" name="fflog_request" value="Submit">
+                         <input type="hidden" name="logCurrentTime" value="1">
+                         <input type="hidden" name="select_time_frame" value="">
+                     </form>
+ 
+                 
+
+ 
+ 
+    <script>
+     $(function () { $('#jstree_demo_div').jstree({
+ 
+         "plugins" : [ "wholerow" ],
+ 
+         "core" : {
+             "dblclick_toggle" :false
+         },
+ 
+          onselect: function(n, t) {
+          t.toggle_branch(n);
+     },
+ 
+     }); });
+ </script>
+ <script>
+     $('#jstree_demo_div').on('click','a',function(){
+ window.location=$(this).attr('href');
+ });
+ 
+ $('#jstree_demo_div').on('select_node.jstree', function (e, data) {
+     data.instance.toggle_node(data.node);
+ });
+ 
+ 
+ </script>
+ 
+ <script type="text/javascript">
+ 
+ jQuery(document).ready(function(){
+ jQuery('.tableshaddow input[type="button"]').addClass('btn-main');
+ })
+ jQuery(document).ready(function(){
+ jQuery('.tableshaddow input[type="text"]').addClass('form-control');
+ })
+ jQuery(document).ready(function(){
+ jQuery('select').addClass('form-control');
+     setTimeout(function(){
+         jQuery('.loading').hide();
+         jQuery('.loading_light').hide();
+     },2000);
+ })
+ jQuery(document).ready(function(){
+     var hostName = window.location.hostname;
+     $(".header-section").html(hostName+' says');
+ 
+ jQuery('.main-tab td').addClass('tab-style');
+     if(window.location.href.includes('debug.pl')){
+     }else{
+         expandNav();
+     }
+ 
+ })
+ jQuery(document).on('click','.nav-link', function(e){
+ var href = jQuery(this).attr('href');
+ window.location = href;
+ })
+ jQuery(document).on('click','.exp', function(e){
+ 
+     $(this).hide()
+     if($(this).attr('id') == 'expand')
+     {
+         $("#jstree_demo_div").jstree('open_all');
+         $('#collapse').fadeIn("slow");
+     }
+     else
+     {
+         $("#jstree_demo_div").jstree('close_all');
+         $('#expand').fadeIn("slow");
+     }
+ })
+     /*Athars custom JS*/
+ $(document).on('click', '.custom-delete-button', function(e){
+ 
+     e.preventDefault();
+     $(this).siblings('.cutom-delete-checkbox').attr('checked', 'checked')
+     DeleteHostsSubmit();
+ })
+ 
+ $(document).on('click', '.custom-vdelete-button', function(e){
+ 
+     e.preventDefault();
+     $(this).siblings('.cutom-vdelete-checkbox').attr('checked', 'checked')
+    $('.volume-summary-delete-form').submit()
+     checkValues();
+ });
+ 
+ $(function(){
+ 
+ $('input[type="submit"]').addClass("btn-main");
+ });
+ 
+ $(function(){
+ 
+     $('textarea').addClass("form-control");
+ });
+ function expandNav()
+ {
+     var url= window.location.href;
+     url = url.split("StoneFly/bin/");
+     var string = '/StoneFly/bin/'+url[1];
+     parentMenuExpansion(string)
+     restoreExpandedMenu();
+ }
+ 
+ function decodeURIComponentSafe(uri, mod) {
+     var out = new String(),
+         arr,
+         i = 0,
+         l,
+         x;
+     typeof mod === "undefined" ? mod = 0 : 0;
+     arr = uri.split(/(%(?:d0|d1)%.{2})/);
+     for (l = arr.length; i < l; i++) {
+         try {
+             x = decodeURIComponent(arr[i]);
+         } catch (e) {
+             x = mod ? arr[i].replace(/%(?!\d+)/g, '%25') : arr[i];
+         }
+         out += x;
+     }
+     return out;
+ }
+ 
+ function parentMenuExpansion(data_url)
+ {
+     if(data_url.includes('%')){
+         data_url = decodeURIComponentSafe(data_url);
+     }
+     else{
+         data_url = decodeURI(data_url);
+     }
+ 
+     var found = 0;
+     var data = $('#jstree_demo_div').jstree(true).get_json('#', {flat:true});
+     var counter = 0;
+     $.each(data,function(i,item){
+         if(decodeURI(item.a_attr.href) == data_url || (decodeURI(item.a_attr.href).indexOf(data_url) >= 0) && counter == 0)
+         {
+             $("#jstree_demo_div").jstree("select_node", "#"+item.id+"", true);
+             $("#"+item.id+"").addClass('active');
+             counter++
+         }
+     })
+ }
+ function restoreExpandedMenu()
+ {
+     if(localStorage.themeOption == 0){
+         localStorage.themeOption = 0; // light theme
+         changeCSS('/StoneFly/presentation/stonefly/css/light.css',0)
+     }
+     else{
+         localStorage.themeOption = 1; // dark theme
+         changeCSS('/StoneFly/presentation/stonefly/css/dark.css',0)
+     }
+ 
+     if(localStorage.expanded_node != ""  && localStorage.expanded_node != undefined )
+     {
+         var exp_nodes = localStorage.expanded_node;
+         exp_nodes = exp_nodes.split(',')
+         $.each(exp_nodes, function(i,item)
+         {
+             if(item != undefined && item != "" )
+             {
+                 $("#jstree_demo_div").jstree("open_node", "#"+item+"");
+             }
+         })
+     }
+     $("#jstree_demo_div").on("open_node.jstree", function (e, data) {
+         if(localStorage.expanded_node == "" || localStorage.expanded_node == undefined )
+         {
+             var nodes_list = Array();
+         }
+         else
+         {
+             var nodes_list = localStorage.expanded_node
+             nodes_list = nodes_list.split(',')
+         }
+         var node_list1 = Array()
+         nodes_list1 = nodes_list;
+         nodes_list1.push(data.node.id)
+         localStorage.expanded_node = nodes_list1
+     });
+     $("#jstree_demo_div").on("close_node.jstree", function (e, data) {
+         var nodes_list = localStorage.expanded_node
+         nodes_list = nodes_list.split(',')
+         var node_list1 = Array()
+         nodes_list1 = nodes_list;
+         var removeItem = data.node.id;
+         nodes_list1 = jQuery.grep(nodes_list1, function(value) {
+             return value != removeItem;
+         });
+         localStorage.expanded_node = nodes_list1
+     });
+ 
+     if($('.jstree-open').length >= 32)
+     {
+         $('#expand').hide();
+         $('#collapse').fadeIn("slow");
+     }
+ 
+ }
+ 
+     $(document).ready(function(){
+         $(".toggler").click(function(){
+             $(".theme-options").show();
+             $(".toggler-close").show();
+         });
+         $(".toggler-close").click(function(){
+             $(".theme-options").hide();
+             $(".toggler-close").hide();
+             $(".toggler").show();
+         });
+     });
+ $("body").on("click",function(){
+ 
+     $("#cancel-btn").css('box-shadow','');
+     $("#confirm-btn").css('box-shadow','');
+ });
+ $(".cancel-btn").on("click",function(){
+     $('.popup_box').hide('slow');
+     $(".background-section").hide('slow');
+     $('#confirm-btn').removeClass();
+     $('#confirm-btn').addClass('confirm-btn');
+     $('#cancel-btn').removeClass();
+     $('#cancel-btn').addClass('cancel-btn');
+ 
+     $("#cancel-btn").css('box-shadow','');
+     $("#confirm-btn").css('box-shadow','');
+ });
+ 
+ 
+ function stopProcessing(e)
+ {
+     e.preventDefault();
+     return false;
+ 
+ }
+ 
+ function newConfirmAlertPopupHTML(className = '', titleHtml = '', subTitleHtml = '', icon = '')
+ {
+     // change \n to the &lt;br /> for html line
+     var text = titleHtml;
+     var eachLine = text.split('\n');
+     var newTextLine = '';
+ 
+     $( eachLine ).each(function( i ) {
+         newTextLine += eachLine[i]+'<br />';
+     });
+ 
+ 
+     $(".confirm-btn").addClass(className);
+     $(".cancel-btn").addClass(className);
+     $(".sub-title-section").html(newTextLine);
+     $(".title-section").html(subTitleHtml);
+     if(icon == '' || icon == 'warning'){
+         icon = '/StoneFly/presentation/stonefly/img/warning.png';
+     }
+     if(icon == 'error')
+     {
+         icon = '/StoneFly/presentation/stonefly/img/error.png';
+     }
+     else if(icon == 'success')
+     {
+         icon = '/StoneFly/presentation/stonefly/img/success.png';
+     }
+     else if(icon == 'question')
+     {
+         icon = '/StoneFly/presentation/stonefly/img/question.png';
+     }
+     else if(icon == 'ambiguous')
+     {
+         icon = '/StoneFly/presentation/stonefly/img/ambiguous.png';
+     }
+     $(".alert-icon").attr('src',icon);
+ 
+     if(className.startsWith('confirm_'))
+     {
+         $('.cancel-btn').css('display','inline');
+     }
+     else // alert_
+     {
+         $('.cancel-btn').css('display','none');
+     }
+ 
+     $(".background-section").show('slow');
+     $('.popup_box').show('slow');
+ 
+     setTimeout(function(){
+         $("#cancel-btn").css('box-shadow','');
+         $("#cancel-btn").removeClass('active-btn');
+         $("#confirm-btn").css('box-shadow','0 0 0 2px lightskyblue');
+         $("#confirm-btn").addClass('active-btn');
+         $('.popup_box').attr("tabindex",-1); // You cannot take focus without a tabindex.
+         $('.popup_box').focus();
+     },100);
+ }
+ 
+ $(document).on('keyup',function(event){
+     var keycode = (event.keyCode ? event.keyCode : event.which);
+     // Note that $('.popup_box').is(':focus') doesnt work, so activeElement must be used.
+     var myElement = $('.popup_box').get(0);
+     if($('.popup_box').is(':visible') &&
+        (myElement === document.activeElement)){
+         if(keycode == 13){ // Enter key
+             $("#confirm-btn").click();
+         }
+         if(keycode == 27){ // Escape key
+             $(".cancel-btn").click();
+         }
+         if(keycode == 37){ // Left arrow key
+             $("#cancel-btn").css('box-shadow','');
+             $("#cancel-btn").removeClass('active-btn');
+             $("#confirm-btn").css('box-shadow','0 0 0 2px lightskyblue');
+             $("#confirm-btn").addClass('active-btn');
+         }
+         if(keycode == 39){ // Right arrow key
+             $("#confirm-btn").css('box-shadow','');
+             $("#confirm-btn").removeClass('active-btn');
+             $("#cancel-btn").css('box-shadow','0 0 0 2px lightskyblue');
+             $("#cancel-btn").addClass('active-btn');
+         }
+         // Space key
+         if(keycode == 32 && $('.confirm-btn').hasClass('active-btn')){
+             /*var classToTrigger = '';
+             setTimeout(function(){
+                 var classes = $("#confirm-btn").attr('class');
+                 classes = classes.split(' ');
+                 for(var x = 0; x < classes.length; x++){
+                     if(classes[x].includes('confirm_') || classes[x].includes('confirm-')){
+                         classToTrigger = classes[x];
+                     }
+                 }
+                 $("."+classToTrigger).trigger('click');
+ 
+             },100);*/
+             $("#confirm-btn").click();
+ 
+         }
+         // Space key
+         if(keycode == 32 && $('.cancel-btn').hasClass('active-btn')){
+             setTimeout(function(){
+                 $(".cancel-btn").trigger('click');
+             },100);
+         }
+     }
+ 
+ });
+$(document).ready(function () {
+  const length = $('#table_volume_length');
+  const info = $('#table_volume_info');
+
+  // Wrap footer controls once
+  if (!$('#table_volume_footer').length) {
+    $('<div id="table_volume_footer" class="dt-footer"></div>')
+      .insertAfter('#table_volume');
+  }
+
+  // Move elements
+  length.appendTo('#table_volume_footer');
+  info.appendTo('#table_volume_footer');
+  $('#table_volume_paginate').appendTo('#table_volume_footer');
+}); 
+ </script>
+
+
+
+
+
+
+
+</div></div></div><span id="PING_CONTENT_DLS_POPUP" style="display: none;"></span><div style="background-color: transparent; border: none; bottom: 15px; display: block; margin: 0px; opacity: 1; padding: 0px; position: fixed; right: 15px; z-index: 2147483647;"><template shadowrootmode="closed"><style>/*!
+ * 
+ *     MCAFEE RESTRICTED CONFIDENTIAL
+ *     Copyright (c) 2025 McAfee, LLC
+ *
+ *     The source code contained or described herein and all documents related
+ *     to the source code ("Material") are owned by McAfee or its
+ *     suppliers or licensors. Title to the Material remains with McAfee
+ *     or its suppliers and licensors. The Material contains trade
+ *     secrets and proprietary and confidential information of McAfee or its
+ *     suppliers and licensors. The Material is protected by worldwide copyright
+ *     and trade secret laws and treaty provisions. No part of the Material may
+ *     be used, copied, reproduced, modified, published, uploaded, posted,
+ *     transmitted, distributed, or disclosed in any way without McAfee's prior
+ *     express written permission.
+ *
+ *     No license under any patent, copyright, trade secret or other intellectual
+ *     property right is granted to or conferred upon you by disclosure or
+ *     delivery of the Materials, either expressly, by implication, inducement,
+ *     estoppel or otherwise. Any license under such intellectual property rights
+ *     must be expressed and approved by McAfee in writing.
+ *
+ */
+@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-Thin.ttf") format("truetype");font-weight:100;font-style:normal}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-ThinItalic.ttf") format("truetype");font-weight:100;font-style:italic}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-ExtraLight.ttf") format("truetype");font-weight:200;font-style:normal}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-ExtraLightItalic.ttf") format("truetype");font-weight:200;font-style:italic}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-Light.ttf") format("truetype");font-weight:300;font-style:normal}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-LightItalic.ttf") format("truetype");font-weight:300;font-style:italic}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-Regular.ttf") format("truetype");font-weight:400;font-style:normal}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-Italic.ttf") format("truetype");font-weight:400;font-style:italic}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-Medium.ttf") format("truetype");font-weight:500;font-style:normal}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-MediumItalic.ttf") format("truetype");font-weight:500;font-style:italic}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-SemiBoldItalic.ttf") format("truetype");font-weight:600;font-style:italic}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-Bold.ttf") format("truetype");font-weight:700;font-style:normal}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-BoldItalic.ttf") format("truetype");font-weight:700;font-style:italic}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-ExtraBold.ttf") format("truetype");font-weight:800;font-style:normal}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");font-weight:800;font-style:italic}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-Black.ttf") format("truetype");font-weight:900;font-style:normal}@font-face{font-family:"McAfeePoppins";src:url("../../../fonts/Poppins-BlackItalic.ttf") format("truetype");font-weight:900;font-style:italic}*{border:0;box-sizing:border-box;font:inherit;font-family:"McAfeePoppins",Helvetica,Arial;font-size:100%;margin:0;padding:0;vertical-align:baseline;outline:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}html,body{background-color:#f5f6fa;font-family:"McAfeePoppins",Helvetica,Arial;line-height:1;height:100%;width:100%}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}b{font-weight:bold}img{display:block}.dls__container{align-items:center;display:flex;margin:0 auto;margin-top:50px;position:relative}.dls__popup__expanded{align-items:center;overflow:hidden;border-radius:100px;cursor:pointer;display:flex;left:0;padding:15px;position:absolute;height:95px;width:383px;background-color:#fff;transition:all .3s ease-in-out}.dls__popup__expanded .dls__icon{height:65px;width:73px}.content{margin-left:12px}.content .content__images{display:flex;align-items:center;width:250px}.content .content__images .seperator__line{margin-left:5px;margin-right:10px}.content .content__images #dls_close_icon{cursor:pointer;margin-left:auto;margin-right:0px}.content p{font-family:"McAfeePoppins",Helvetica,Arial;font-weight:"400";font-size:14px;line-height:20px;margin-top:8px;color:#4258ff;width:250px;cursor:pointer}.shield{overflow:hidden;box-shadow:0px 2px 4px 0px rgba(33,41,52,.12),0px -1px 2px 0px rgba(0,0,0,.08);align-items:center;border-radius:100px;bottom:0;display:flex;height:95px;justify-content:center;position:absolute;right:0;width:383px;transition:all .3s ease-in-out}.shield__circle{display:flex;justify-content:center;align-items:center;width:55px;height:55px;background-color:#c01818;transition:all .6s ease-in-out .2s;z-index:1;opacity:0}
+
+/*# sourceMappingURL=../sourceMap/chrome/css/download_scan_popup.css.map*/</style><div class="dls__container">
+  <div class="shield" style="background: transparent; opacity: 0.1; display: none;">
+    <div class="shield__circle" style="opacity: 1;">
+      <img src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/images/download_scan/mcafee_logo_white.svg?secret=tnxh3w" x-mcsrc="" id="dls_ballon_icon" x-mcsrcparsed="true">
+    </div>
+    <div class="dls__popup__expanded" style="opacity: 0;">
+      <img src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/images/download_scan/download_scan_icon.svg?secret=tnxh3w" x-mcsrc="" class="dls__icon" x-mcsrcparsed="true">
+      <div class="content">
+        <div class="content__images">
+          <img src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/images/download_scan/mcafee_logo_red.svg?secret=tnxh3w" x-mcsrc="" id="dls_mcafee_logo" x-mcsrcparsed="true">
+          <img src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/images/download_scan/seperator_line.svg?secret=tnxh3w" x-mcsrc="" class="seperator__line" x-mcsrcparsed="true">
+          <img src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/images/download_scan/webadvisor.svg?secret=tnxh3w" x-mcsrc="" x-mcsrcparsed="true">
+          <img src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/images/download_scan/close-outline.svg?secret=tnxh3w" x-mcsrc="" id="dls_close_icon" x-mcsrcparsed="true">
+        </div>
+        <p id="download_scan_popup_expanded_descriptions">Your download's being scanned. We'll let you know if there's an issue.</p>
+      </div>
+    </div>
+  </div>
+</div><style>/*!
+ * 
+ *     MCAFEE RESTRICTED CONFIDENTIAL
+ *     Copyright (c) 2025 McAfee, LLC
+ *
+ *     The source code contained or described herein and all documents related
+ *     to the source code ("Material") are owned by McAfee or its
+ *     suppliers or licensors. Title to the Material remains with McAfee
+ *     or its suppliers and licensors. The Material contains trade
+ *     secrets and proprietary and confidential information of McAfee or its
+ *     suppliers and licensors. The Material is protected by worldwide copyright
+ *     and trade secret laws and treaty provisions. No part of the Material may
+ *     be used, copied, reproduced, modified, published, uploaded, posted,
+ *     transmitted, distributed, or disclosed in any way without McAfee's prior
+ *     express written permission.
+ *
+ *     No license under any patent, copyright, trade secret or other intellectual
+ *     property right is granted to or conferred upon you by disclosure or
+ *     delivery of the Materials, either expressly, by implication, inducement,
+ *     estoppel or otherwise. Any license under such intellectual property rights
+ *     must be expressed and approved by McAfee in writing.
+ *
+ */
+.mc-interactive-balloon{position:absolute;right:-50px;bottom:8px;box-shadow:rgba(0,0,0,.12) 0px 0px 10px;height:40px;width:40px;background:#1671ee;border-radius:20px;display:flex;justify-content:center;align-items:center}
+
+/*# sourceMappingURL=../sourceMap/chrome/css/interactive_balloon.css.map*/</style></template></div></body></html>
