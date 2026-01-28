@@ -22,7 +22,10 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
      <link rel="stylesheet" href="css/datatables.min.css">
      <link rel="stylesheet" href="css/responsive.dataTables.min.css">
      <link rel="stylesheet" href="css/style.min.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+>
      <!--[if lt IE 9]>
      <script src="/StoneFly/presentation/stonefly/bower_components/jquery/dist/jquery.min.js"></script>
  <![endif]-->
@@ -547,41 +550,72 @@ table.table.table-lightborder>thead>tr>th {
   font-size: 14px;
   color: #666;
 }
-.my-carousel-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.my-carousel {
+.my-carousel-container {
+  position: relative;          /* 🔥 REQUIRED */
   width: 100%;
+  padding: 0 60px;             /* space for arrows */
+  box-sizing: border-box;
+}
+/* ICON COLOR */
+.my-arrow i {
+  color: #000000;        /* 🔥 CHANGE COLOR HERE */
+  font-size: 18px;
 }
 
-.my-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
+/* HOVER */
+.my-arrow:hover {
+  background: #000000;
+}
 
-  background: #fff;
-  border: 1px solid #ccc;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.my-arrow:hover i {
+  color: #ffffff;
+}
+/* LEFT SECTION */
+.discovered-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 220px;
+}
 
+.discovered-left h2 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #184070;
+  margin: 0;
+}
+
+.open-btn {
+    margin-top: 30px;
+  width: 60px;
+  height: 22px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #0a2f66 !important;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 20px;
-  line-height: 38px;
-  text-align: center;
 }
 
-.my-arrow-left {
-  left: -20px;   /* adjust if needed */
+/* RIGHT SECTION */
+.discovered-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.my-arrow-right {
-  right: -20px;  /* adjust if needed */
+.discovered-right p {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  color: #184070;
+  line-height: 1.2;
 }
+
+
+
+
 
      </style>
  <script>
@@ -758,6 +792,8 @@ document.querySelectorAll('.has-sub-menu > a').forEach(menu => {
                              <div class="logged-user-role">SC-50-215-24-115</div>
                              <div class="logged-user-name">admin</div>
                              <div class="logged-user-role">ADMINISTRATOR</div>
+
+                             
                          </div>
                      </div>
  
@@ -812,7 +848,7 @@ document.querySelectorAll('.has-sub-menu > a').forEach(menu => {
                                     <i class="fa fa-chevron-down menu-arrow"></i>
                                 </a>
                              <ul class="sub-menu">
-                                 <li><a href="https://50.215.24.115/StoneFly/bin/resources_summary">Summary</a></li>
+                                 <li><a href="https://50.215.24.115/StoneFly/bin/resources_summary.pl">Summary</a></li>
                                  <li><a href="https://50.215.24.115/StoneFly/bin/resources_detail.pl">Detail</a></li>
                                  <li><a href="https://50.215.24.115/StoneFly/bin/flash_cache_create.pl">Create Flash Cache</a></li>
                                  <li><a href="https://50.215.24.115/StoneFly/bin/flash_cache_general.pl">Flash Cache Configuration</a></li>
@@ -929,7 +965,8 @@ document.querySelectorAll('.has-sub-menu > a').forEach(menu => {
                         <img class="mr-2" id="toggleSidebar" src="images/menu-icon.webp" width="30px" style="vertical-align: middle;">
                         <div style="font-weight: 500; color: #002D62; font-family: Poppins, sans-serif; line-height: normal; margin-left: 10px;font-size: 18px;">
                             Dashboard
-                               <i class="fa fa-phone menu-arrow" style="color:white;"></i>
+                            
+          
                         </div>
                     </div>
                  
@@ -1410,138 +1447,172 @@ document.querySelectorAll('.has-sub-menu > a').forEach(menu => {
                 style="width:30% !important; display:flex; align-items:center; justify-content:center; max-height:120px;">
 
                 <div class="element-wrapper" style="display:flex; align-items:center; justify-content:center;">
-                    <img src="images/support icon.png" alt="">
-                    <span style="font-weight:700;font-size:16px;color:#184070; margin-left:10px;">
-                        Quick Links
-                    </span>
-                    <span style="font-weight:400;font-size:16px;color:#184070; margin-left:6px;">
-                        Customer Support
-                    </span>
+                 <div class="discovered-left">
+    <h2>Discovered SC's</h2>
+    <button class="open-btn">Open</button>
+  </div>
+
+  <div class="discovered-right">
+    <p>SC-192-168-10-250</p>
+    <p>SC-192-168-10-250</p>
+    <p>SC-192-168-10-250</p>
+    <p>SC-192-168-10-250</p>
+  </div>
+                    
+                    
                 </div>
 
         </div>
      </div>
  
-    <div class="icon-box-grid">
 
-  <a href="#" class="icon-box active">
-    <img src="images/SAN.png" alt="SAN">
-    <h4>SAN</h4>
-    <p>Here for SAN</p>
-  </a>
+<style>
+ .my-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 70px; /* 🔥 space for arrows */
+  box-sizing: border-box;
+}
 
-  <a href="#" class="icon-box">
-    <img src="images/NAS.png" alt="NAS">
-    <h4>NAS</h4>
-    <p>Here for NAS</p>
-  </a>
+.my-carousel {
+  width: 100%;
+}
 
-  <a href="#" class="icon-box">
-    <img src="images/TargetPortal.png" alt="Target Portal">
-    <h4>Target Portal</h4>
-    <p>Portal Settings</p>
-  </a>
+/* Each slide same height */
+.my-slide {
+  display: flex !important;
+  height: 100%;
+}
 
-  <a href="#" class="icon-box">
-    <img src="images/Resources.png" alt="Resources">
-    <h4>Resources</h4>
-    <p>See Resources here</p>
-  </a>
+.my-icon-box {
+  width: 100%;
+  min-height: 180px;              /* 🔥 SAME HEIGHT */
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
 
-  <a href="#" class="icon-box">
-    <img src="images/System.png" alt="System">
-    <h4>System</h4>
-    <p>Edit / View System Setting</p>
-  </a>
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  <a href="#" class="icon-box">
-    <img src="images/Reports.png" alt="Reports">
-    <h4>Reports</h4>
-    <p>Edit / View Reports</p>
-  </a>
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-</div>
- <div class="icon-box-grid">
+/* ARROWS */
+.my-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 
-  <a href="#" class="icon-box active">
-    <img src="images/SAN.png" alt="SAN">
-    <h4>SAN</h4>
-    <p>Here for SAN</p>
-  </a>
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #ffffff !important;
 
-  <a href="#" class="icon-box">
-    <img src="images/NAS.png" alt="NAS">
-    <h4>NAS</h4>
-    <p>Here for NAS</p>
-  </a>
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  <a href="#" class="icon-box">
-    <img src="images/TargetPortal.png" alt="Target Portal">
-    <h4>Target Portal</h4>
-    <p>Portal Settings</p>
-  </a>
+  cursor: pointer;
+}
 
-  <a href="#" class="icon-box">
-    <img src="images/Resources.png" alt="Resources">
-    <h4>Resources</h4>
-    <p>See Resources here</p>
-  </a>
+/* ICON COLOR */
+.my-arrow i {
+  font-size: 18px;
+  color: #000000;
+}
 
-  <a href="#" class="icon-box">
-    <img src="images/System.png" alt="System">
-    <h4>System</h4>
-    <p>Edit / View System Setting</p>
-  </a>
+/* HOVER */
+.my-arrow:hover {
+  background: #000000;
+}
+.my-arrow:hover i {
+  color: #000000;
+}
 
-  <a href="#" class="icon-box">
-    <img src="images/Reports.png" alt="Reports">
-    <h4>Reports</h4>
-    <p>Edit / View Reports</p>
-  </a>
+/* POSITION */
+.my-arrow-left {
+  left: 10px;
+}
+.my-arrow-right {
+  right: 10px;
+}
+.my-icon-box h4 {
+    color:#002d62;
+}
+.my-icon-box p {
+    color:#002d62;
+}
+</style>
 
-</div>
- <div class="icon-box-grid">
-
-  <a href="#" class="icon-box active">
-    <img src="images/SAN.png" alt="SAN">
-    <h4>SAN</h4>
-    <p>Here for SAN</p>
-  </a>
-
-  <a href="#" class="icon-box">
-    <img src="images/NAS.png" alt="NAS">
-    <h4>NAS</h4>
-    <p>Here for NAS</p>
-  </a>
-
-  <a href="#" class="icon-box">
-    <img src="images/TargetPortal.png" alt="Target Portal">
-    <h4>Target Portal</h4>
-    <p>Portal Settings</p>
-  </a>
-
-  <a href="#" class="icon-box">
-    <img src="images/Resources.png" alt="Resources">
-    <h4>Resources</h4>
-    <p>See Resources here</p>
-  </a>
-
-  <a href="#" class="icon-box">
-    <img src="images/System.png" alt="System">
-    <h4>System</h4>
-    <p>Edit / View System Setting</p>
-  </a>
-
-  <a href="#" class="icon-box">
-    <img src="images/Reports.png" alt="Reports">
-    <h4>Reports</h4>
-    <p>Edit / View Reports</p>
-  </a>
-
-</div>
 
 <!-- Carousal Code -->
+<div class="my-carousel-wrapper">
+ <button class="my-arrow my-arrow-left"> <i class="fa-solid fa-chevron-left"></i><</button>
+  <div class="my-carousel">
 
+    <div class="my-slide">
+      <div class="my-icon-box">
+        
+        <img src="images/SAN.png" alt="SAN">
+        <h4>SAN</h4>
+        <p>Here for SAN</p>
+      </div>
+    </div>
+
+    <div class="my-slide">
+      <div class="my-icon-box">
+        <img src="images/NAS.png" alt="NAS">
+        <h4>NAS</h4>
+        <p>Here for NAS</p>
+      </div>
+    </div>
+
+    <div class="my-slide">
+      <div class="my-icon-box">
+        <img src="images/TargetPortal.png" alt="Target Portal">
+        <h4>Target Portal</h4>
+        <p>Portal Settings</p>
+      </div>
+    </div>
+
+    <div class="my-slide">
+      <div class="my-icon-box">
+        <img src="images/Resources.png" alt="Resources">
+        <h4>Resources</h4>
+        <p>See Resources here</p>
+      </div>
+    </div>
+
+    <div class="my-slide">
+      <div class="my-icon-box">
+        <img src="images/System.png" alt="System">
+        <h4>System</h4>
+        <p>Edit / View System Setting</p>
+      </div>
+    </div>
+ <div class="my-slide">
+      <div class="my-icon-box">
+        <img src="images/System.png" alt="System">
+        <h4>System</h4>
+        <p>Edit / View System Setting</p>
+      </div>
+    </div>
+     <div class="my-slide">
+      <div class="my-icon-box">
+        <img src="images/System.png" alt="System">
+        <h4>System</h4>
+        <p>Edit / View System Setting</p>
+      </div>
+    </div>
+   <!-- RIGHT ARROW (OUTSIDE carousel) -->
+ 
+  </div>
+ <button class="my-arrow my-arrow-right">  <i class="fa-solid fa-chevron-right"></i></button>
+</div>
 
 <!--  -->
      <div class="row" style="margin-top: 20px;">
@@ -1805,33 +1876,30 @@ $(document).ready(function () {
 <script>
 $(document).ready(function () {
 
-  console.log('jQuery version:', $.fn.jquery);
-
   $('.my-carousel').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
     infinite: true,
+    speed: 500,
+
     arrows: true,
-    dots: false,
-    speed: 600,
+    prevArrow: $('.my-arrow-left'),
+    nextArrow: $('.my-arrow-right'),
+
+    swipe: true,
+    draggable: true,
+    touchMove: true,
+
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 3 }
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 2 }
-      },
-      {
-        breakpoint: 480,
-        settings: { slidesToShow: 1 }
-      }
+      { breakpoint: 1024, settings: { slidesToShow: 3 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
+      { breakpoint: 480, settings: { slidesToShow: 1 } }
     ]
   });
 
 });
 </script>
+
 
  <style>
     table.dataTable tbody tr {
