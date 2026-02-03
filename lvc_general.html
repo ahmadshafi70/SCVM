@@ -867,14 +867,29 @@
     .breadcrumb .logout-button {
       margin-left: -5px;
     }
-
+ 
     /* TAB BASE */
     .tab-style,
     .tab-style-active {
       position: relative;
     }
-
-    .tab-style {}
+     
+    .tab-style:hover {
+        background: #002D62;
+        font-weight: 500 !important;
+        font-size: 12px !important;
+        line-height: 1;
+        text-decoration: none;
+        color: #fff !important;
+    }
+   .tab-style a:hover {
+        background: #002D62;
+        font-weight: 500 !important;
+        font-size: 12px !important;
+        line-height: 1;
+        text-decoration: none;
+        color: #fff !important;
+    }
 
 
     /* DROPDOWN */
@@ -889,12 +904,13 @@
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
       border-radius: 6px;
       padding: 6px 0;
-      z-index: 999;
+      z-index: 10999;
       color: #ffffff;
     }
 
     /* DROPDOWN ITEMS */
     .tab-dropdown-menu li a {
+        text-align: left;
       display: block;
       padding: 10px 14px;
       color: #002D62 !important;
@@ -903,6 +919,7 @@
     }
 
     .tab-dropdown-menu li a:hover {
+            text-align: left;
       display: block;
       padding: 10px 14px;
       color: #ffffff !important;
@@ -971,11 +988,12 @@
 
     /* Section headers */
     .tablehilite {
-      background: #f4f6fb !important;
+      background: #ffffff !important;
       color: #0b2a5f;
       font-weight: 600;
       font-size: 15px;
       padding: 12px !important;
+      border-bottom: 1px solid #ffffff !important;
     }
 
     /* Labels */
@@ -1053,7 +1071,7 @@
     }
 
     /* Force left alignment for div-based form labels */
-    .left-card label,
+    .left-card label, 
     .left-card .defaultRequiredFieldLabel {
       text-align: left !important;
       float: none !important;
@@ -1184,6 +1202,60 @@
       background: #0b2a5f;
       border-color: #0b2a5f;
     }
+    /* MAIN CONTAINER */
+.tableshaddow {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* HEADER */
+.table-nav {
+  background: #002d62;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+/* ROW */
+.rowOn {
+  background: #ffffff;
+}
+
+/* FLEX ROW */
+.volume-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+/* LABEL COLUMN (30%) */
+.volume-label {
+
+  font-weight: 600;
+  color: #002d62;
+}
+
+/* FIELD COLUMN (70%) */
+.volume-field {
+  width: 70%;
+}
+
+/* SELECT */
+.volume-field select.form-control {
+  width: 100%;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.125rem + 7px);
+}
+.element-box .tab-style-active a:hover {
+    color:#ffffff !important;
+} 
+.tab-bottom a:hover{
+     color:#ffffff !important;
+}
+
   </style>
 
   <script type="text/javascript">
@@ -1738,9 +1810,9 @@
                         role="presentation"></i>Volumes</a>
                     <ul role="group" class="jstree-children">
                       <li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-list fa-sub&quot;}"
-                        aria-selected="true" aria-level="3" aria-labelledby="j1_4_anchor" id="j1_4"
+                        aria-selected="true" aria-level="3" aria-dsdsdfdslabelledby="j1_4_anchor" id="j1_4"
                         class="jstree-node jstree-leaf active">
-                        <div unselectable="on" role="presentation" class="jstree-wholerow jstree-wholerow-clicked">
+                        <div unselectable="on" role="presentation" class="jstree-wholerow jstdsfdsfdsree-wholerow-clicked">
                           &nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a
                           class="jstree-anchor jstree-clicked"
                           href="https://50.215.24.115/StoneFly/bin/lv_summary.pl?object_id=" tabindex="-1"
@@ -2007,10 +2079,7 @@ newWindow.focus();
      -->
 
             <div>
-              <ul class="help">
-                <li onclick="javascript:displayHelpWindow(&#39;volume_summary_help.html&#39;);"><i
-                    class="fa fa-question-circle" aria-hidden="true"></i> Help</li>
-              </ul>
+            
             </div>
 
             <div class="content-i">
@@ -2083,7 +2152,7 @@ newWindow.focus();
                                 <td width="" align="CENTER" class="tab-style tab-dropdown has-dropdown">
                                   
 
-                                  <a href="https://50.215.24.115/StoneFly/bin/lv_create.pl" class="tab-link "
+                                  <a href="https://50.215.24.115/StoneFly/bin/lv_create.html" class="tab-link "
                                     data-tab="create-volume">SAN Volume</a>
                                   <i class="fa fa-plus tab-plus"></i>
                                   <i class="fa fa-minus tab-minus"></i>
@@ -2134,7 +2203,26 @@ newWindow.focus();
                                     href="https://50.215.24.115/StoneFly/bin/redirect.pl?redirect_file=lvc_general.pl&amp;object_id=$object_id">Configure
                                     Volume</a>
                                 </td>
+                                
+                                <td width="" align="CENTER" class="tab-style tab-dropdown has-dropdown">
+                                  
 
+                                  <a href="https://50.215.24.115/StoneFly/bin/lv_create.pl" class="tab-link "
+                                    data-tab="create-volume">Configure
+                                    Volume</a>
+                                  <i class="fa fa-plus tab-plus"></i>
+                                  <i class="fa fa-minus tab-minus"></i>
+                                  <ul class="tab-dropdown-menu">
+                                    <li class="active"><a href="#">Configure
+                                    Volume</a></li>
+                                    <li><a href="#">Add Image</a></li>
+                                    <li><a href="#">Manage Image</a></li>
+                                    <li><a href="#">Manage Snapshot</a></li>
+                                    <li><a href="#">Thin Volumes</a></li>
+                                    <li><a href="#">Deduplicated Volumes</a></li>
+                                    
+                                  </ul>
+                                </td>
 
                                 <td width="" align="CENTER" class="tab-style">
                                   <a href="https://50.215.24.115/StoneFly/bin/lv_detail.pl?object_id=$object_id">Volume
@@ -2161,160 +2249,149 @@ newWindow.focus();
                   </table>
 
 
-                  <div class="volume-create-wrapper">
-                    <form name="modifyForm" method="POST" action="https://50.215.24.115/StoneFly/bin/lv_create.pl">
-                      <input type="hidden" name="page" value="volume_create.html" />
-                      <input type="hidden" name="lv_create_mode" value="auto" />
-                      <input type="hidden" name="encryption_check" value="" />
-                      <input type="hidden" name="metadata_check" value="" />
-                      <input type="hidden" name="thin_space_check" value="" />
-                      <input type="hidden" name="nas_segment_check" value="" />
-                      <input type="hidden" name="target_portal_id" value="" />
-                      <input type="hidden" name="sf_osr_id" value="" />
-                      <input type="hidden" name="resource_mixture" value="" />
-                      <input type="hidden" name="check_cache_enabled_resource" value="false" />
-                      <input type="hidden" name="have_cache_enabled_resources" value="true" />
-                      <input type="hidden" name="have_failover_cluster" value="false" />
-                      <input type="hidden" name="overcommitment" value="" />
-                      <input type="hidden" name="continue_create" value="" />
-                      <input type="hidden" name="usb_status" value="0" />
-                      <input type="hidden" name="have_thin_space" value="" />
-                      <input type="hidden" name="have_nas_segment" value="" />
-                      <input type="hidden" name="object_name_save" value="" />
-                      <input type="hidden" name="object_description_save" value="" />
-                      <input type="hidden" name="start_metadata" value="" />
-                      <input type="hidden" name="metadata_confirm" value="" />
-                      <input type="hidden" name="mirror_metadata" value="" />
-                      <input type="hidden" name="caller" value="" />
-                      <input type="hidden" name="caller_id" value="" />
-                      <input type="hidden" name="seg_index" value="" />
-                      <input type="hidden" name="seg_size" value="" />
-                      <input type="hidden" name="req_a_a_mode" value="" />
-                      <input type="hidden" name="req_nas_segment_node" value="" />
-                      <input type="hidden" name="metadata_mirror" value="" />
-                      <input type="hidden" name="create_metadata" value="" />
-                      <input type="hidden" name="no_nas_metadata" value="" />
-                      <input type="hidden" name="submit_form" value="" />
-                      <input type="hidden" name="bypass_limits" value="" />
-                      <!-- LEFT CARD -->
-                      <div class="volume-card left-card">
-                        <div class="card-title">Create New Volume</div>
-                        <!-- Volume Name -->
-                        <div class="form-group">
-                          <label class="defaultRequiredFieldLabel">Volume Name</label>
-                          <input class="defaultFieldInfo form-control" type="text" name="object_name"
-                            value="volume-0013" id="text" size="40" maxlength="40" $text_readonly_volume="" />
-                        </div>
+                <div class="element-box element-margin">
+ <form name="modifyForm" method="POST" action="https://50.215.24.115/StoneFly/bin/lvc_general.pl">
+ <input type="hidden" name="confirmed" value="false">
+ <input type="hidden" name="copy" value="">
+ <input type="hidden" name="submit_form" value="">
+ <input type="hidden" name="usb_encryption_failure" value="">
+ <input type="hidden" name="delete_prot" value="">
+ <input type="hidden" name="delete_prot_req_code" value="$delete_prot_req_code">
+ <input type="hidden" name="set_delete_prot" value="0">
+ 
+ <div class="table-responsive">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0" summary="main">
+ <tbody><tr>
+ 	<td align="left">
+<table width="100%" summary="tabmenu" cellspacing="0" border="0">
 
-                        <!-- Encryption -->
-                        <div class="form-group encryption-block">
-                          <label class="defaultRequiredFieldLabel">Encryption</label>
+<tbody><tr>
 
-                          <div class="checkbox-line">
-                            <input type="checkbox" name="encryption" onclick="javascript: clicked_useencryption();"
-                              value="true" />
-                            <span>Store Encrypted Data</span>
-                          </div>
+<td>
 
-                          <div class="encryption-fields">
-                            <input type="password" name="encryption_password" value="" id="text" size="20"
-                              maxlength="33" class="form-control" $admin_text_disabled="" />
-                            <small>Volume Password</small>
+<table width="100%" summary="title" cellspacing="1" cellpadding="5" border="0">
 
-                            <input type="password" name="encryption_conf_password" value="" id="text" size="20"
-                              maxlength="33" class="form-control" $admin_text_disabled="" />
-                            <small>Confirm Password</small>
-                          </div>
-                        </div>
+<tbody><tr>
 
-                        <!-- Notes -->
-                        <div class="form-group">
-                          <label class="defaultRequiredFieldLabel">Notes</label>
-                          <textarea class="form-control" name="object_description" rows="2" cols="42" maxlength="80"
-                            placeholder="Enter notes here..." $text_readonly_volume=""></textarea>
-                        </div>
+<td width="880" align="center" style="font-weight:bold" class="topnavDisplayhide">
+Volume Management - General Configuration
+</td>
 
-                      </div>
 
-                      <!-- RIGHT CARD -->
-                      <div class="volume-card right-card">
-                        <div class="card-title">Auto Create</div>
+<td align="center" class="topnavDisplayhide" onclick="javascript:displayHelpWindow(&#39;volume_configuration_general_help.htm&#39;);">
+<i class="fa fa-question-circle" aria-hidden="true"></i> Help
+</td>
 
-                        <!-- Space stats -->
-                        <div class="space-grid">
-                          <div class="space-item">
-                            <span class="space-label">Available Space (GiB)</span>
-                            <span class="space-value">6039</span>
-                          </div>
+</tr>
 
-                          <div class="space-item">
-                            <span class="space-label">Usable Space (GiB)</span>
-                            <span class="space-value">4095</span>
-                          </div>
-                        </div>
+</tbody></table>
+
+</td>
+
+</tr>
 
 
 
-                        <!-- Desired size -->
-                        <div class="form-group">
-                          <label class="space-label">
-                            Desired Volume Space (GiB)
-                          </label>
-
-                          <input class="form-control" name="auto_size" type="text" placeholder="Size in GiB"
-                            value="3000" id="text" size="40" $text_readonly_size="" />
-                        </div>
 
 
+</tbody></table>
 
-                        <!-- Buttons -->
-                        <div class="action-buttons">
-                          <input class="defaultFormButton btn btn-outline-primary btn-main" type="reset" name="reset"
-                            value="Undo" />
+</td>
+ </tr>
+ <style>
+    
+    </style>
+<div class="tableshaddow">
 
-                          <input class="defaultFormButton btn btn-primary btn-main" type="submit" name="submitform_"
-                            value="Submit" fdprocessedid="qczasb" onclick="javascript: checkValues();" />
-                        </div>
-                        </div>
-                    </form>
-                    <form name="switchForm" method="POST" action="https://50.215.24.115/StoneFly/bin/lv_create.pl">
-                      <input type="hidden" name="object_name" value="volume-0013" />
-                      <input type="hidden" name="object_description" value="" />
-                      <input type="hidden" name="object_name_save" value="" />
-                      <input type="hidden" name="object_description_save" value="" />
-                      <input type="hidden" name="lv_create_mode" value="auto" />
-                      <input type="hidden" name="order_mode" value="$order_mode" />
-                      <input type="hidden" name="order" value="$order" />
-                      <input type="hidden" name="encryption_password" value="" />
-                      <input type="hidden" name="encryption_conf_password" value="" />
-                      <input type="hidden" name="encryption_key_bits" value="256" />
-                      <input type="hidden" name="encryption_check" value="" />
-                      <input type="hidden" name="metadata_check" value="" />
-                      <input type="hidden" name="thin_space_check" value="" />
-                      <input type="hidden" name="nas_segment_check" value="" />
-                      <input type="hidden" name="thin_space" value="" />
-                      <input type="hidden" name="nas_segment" value="" />
-                      <input type="hidden" name="usb_status" value="0" />
-                      <input type="hidden" name="have_thin_space" value="" />
-                      <input type="hidden" name="have_nas_segment" value="" />
-                      <input type="hidden" name="start_metadata" value="" />
-                      <input type="hidden" name="metadata_confirm" value="" />
-                      <input type="hidden" name="mirror_metadata" value="" />
-                      <input type="hidden" name="caller" value="" />
-                      <input type="hidden" name="caller_id" value="" />
-                      <input type="hidden" name="seg_index" value="" />
-                      <input type="hidden" name="seg_size" value="" />
-                      <input type="hidden" name="req_a_a_mode" value="" />
-                      <input type="hidden" name="req_nas_segment_node" value="" />
-                      <input type="hidden" name="metadata_mirror" value="" />
-                      <input type="hidden" name="create_metadata" value="" />
-                      <input type="hidden" name="no_nas_metadata" value="" />
-                      <input type="hidden" name="check_cache_enabled_resource" value="false" />
-                      <input type="hidden" name="have_cache_enabled_resources" value="true" />
-                      <input type="hidden" name="have_failover_cluster" value="false" />
-                      <input type="hidden" name="bypass_limits" value="" />
-                    </form>
-                  </div>
+  <!-- HEADER -->
+  <div class="tablehilite table-nav" style="text-align:center; padding:15px;background:#ffffff;">
+    <b style="color:#000022 !important">Volume Configurations</b>
+  </div>
+
+  <!-- ROW -->
+  <div class="rowOn" style="padding:15px;">
+
+    <div class="volume-row">
+
+      <!-- LABEL -->
+      <div class="defaultRequiredFieldLabel volume-label">
+        Select Volume
+      </div>
+
+      <!-- FIELD -->
+      <div class="volume-field">
+        <input type="hidden" name="last_select_type" value="">
+
+        <select
+          name="object_id"
+          onchange="javascript:document.modifyForm.submit();"
+          id="myhideable"
+          class="form-control"
+        >
+          <option selected value="0">Select A Volume</option>
+          <option value="94">async-rep-local</option>
+          <option value="412">dedup-pool-0001</option>
+          <option value="419">dedup-pool-0002</option>
+          <option value="76369">kerno-volume-0013</option>
+          <option value="1271">thinpool-0001</option>
+          <option value="265">volume-0004</option>
+          <option value="267">volume-0005</option>
+          <option value="442">volume-0007</option>
+          <option value="415">volume-0007-img-0</option>
+          <option value="422">volume-0009</option>
+          <option value="1274">volume-0010</option>
+          <option value="35887">volume-0011</option>
+          <option value="76367">volume-0012</option>
+          <option value="79">system-metadata</option>
+        </select>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+ <!--
+ 
+ 
+ <tr>
+     <td colspan=4>
+         <table border=0 cellpadding=5 cellspacing=1 summary="deletion request auth code" class="tableshaddow" width=100%>
+             <tr><td colspan=4 align=center class="tablehilite"><b>Deletion Protection Override Authorization Code</b></td></tr>
+             <tr class=rowOn>
+                 <td colspan=2 width=50% class="defaultRequiredFieldLabel">Deletion Protection Override Request Code:</td>
+                 <td colspan=2 width=50% align=left class="defaultFieldInfo" title="Please communicate this Request Code to Customer Support to obtain an Authorization Code">$delete_prot_req_code</td>
+             </tr>
+             <tr class=rowOff>
+                  <td colspan=2 width=50% class="defaultRequiredFieldLabel">Deletion Protection Override Authorization Code:</td>
+                  <td colspan=2 width=50%><input type="text" name="delete_prot_auth_code" size="16" maxlength="16" AUTOCOMPLETE="off" id="delete_prot_auth_code" placeholder="Deletion Protection Override Authorization Code" title="Please communicate this Request Code to Customer Support to obtain an Authorization Code" value="$delete_prot_auth_code"></td>
+             </tr>
+         </table>
+     </td>
+ </tr>
+ 
+ <tr>
+ 	<td>
+ 	<table border="0" width="100%" cellpadding=10 cellspacing=0>
+ 		<tr>
+ 	 		<td bgcolor="#F5F5F5" align="center">
+ 			<input class="defaultFormButton btn-main" type="reset" name="reset" value="  Undo  ">&nbsp;&nbsp;
+ 			<input class="defaultFormButton btn-main checkIt-submit-btn" type="submit" name="submit_form_" value="Submit" onclick="checkValues()">
+ 			</td>
+ 		</tr>
+ 	</table>
+ 	</td>
+ </tr>
+ 
+ -->
+ 
+ 
+ 
+ </tbody></table>
+ </div>
+ </form>
+ </div>
 
                 </div>
 
@@ -2323,7 +2400,6 @@ newWindow.focus();
 
 
 
-                <table width="100%" border="0" cellpadding="0" cellspacing="0" summary="footnotes"></table>
           </form>
         </div>
 
@@ -2764,7 +2840,7 @@ newWindow.focus();
 
   </script>
   <script type="text/javascript" +>
-    $('.has-dropdown').on('click', function (e) {
+    $('.has-dropdown').on('hover', function (e) {
       e.preventDefault();
 
       const td = $(this).closest('.tab-dropdown');

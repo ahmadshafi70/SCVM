@@ -248,13 +248,13 @@
     }
 
     /* Card container for the volume table */
-    #table_volume_wrapper {
+    /* #table_volume_wrapper {
       background: #ffffff;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
       padding: 16px 18px;
       margin-top: 12px;
-    }
+    } */
 
     .nav.upper.nav-tabs .nav-link.active {
       border: 0;
@@ -286,7 +286,7 @@
     }
 
     .dataTables_wrapper {
-      margin: auto !important;
+      margin: 0px !important;
     }
 
     /* ===== Tabs Section Background ===== */
@@ -398,12 +398,12 @@
     /* =========================================================
    MAIN CARD (DATATABLE WRAPPER)
 ========================================================= */
-    #table_volume_wrapper {
+    /* #table_volume_wrapper {
       background: #ffffff;
       border-radius: 14px;
 
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    }
+    } */
 
     /* Remove legacy table shadow */
     #table_volume {
@@ -414,14 +414,14 @@
     /* =========================================================
    CARD HEADER (RESOURCES + SEARCH)
 ========================================================= */
-    #table_volume_wrapper::before {
+    /* #table_volume_wrapper::before {
       content: "Resources";
       display: block;
       font-size: 14px;
       font-weight: 700;
       color: #0b2d5b;
       margin-bottom: 12px;
-    }
+    } */
 
     /* Search */
     #table_volume_filter {
@@ -430,13 +430,13 @@
       right: 18px;
     }
 
-    #table_volume_filter input {
+    /* #table_volume_filter input {
       height: 32px;
       border-radius: 8px;
       border: 1px solid #e2e8f0;
       padding: 0 10px;
       font-size: 12px;
-    }
+    } */
 
     /* =========================================================
    TABLE HEADER
@@ -608,17 +608,9 @@
     }
 
     /* FORCE FLEX LAYOUT */
-    #table_volume_wrapper .dt-footer {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      gap: 16px;
-      margin-top: 14px;
-      padding: 8px 12px;
-      border-top: 1px solid #e5e7eb;
-      width: 100%;
-      box-sizing: border-box;
-    }
+    /* #t
+    
+    */
 
     /* LEFT GROUP */
     #table_volume_wrapper .dt-footer-left {
@@ -779,7 +771,7 @@
       color: #002D62 !important;
     }
 
-    #table_volume_filter input {
+    /* #table_volume_filter input {
       padding: 4px 10px 4px 10px;
       border: 1px solid #ccc;
       border-radius: 10px;
@@ -789,7 +781,7 @@
       color: #6C757D;
       height: 28px;
       font-weight: 500;
-    }
+    } */
 
     /* Hide only the Search label text */
     #table_volume_filter label {
@@ -947,7 +939,7 @@
     /* Layout */
     .volume-create-wrapper {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 24px;
 
     }
@@ -2237,45 +2229,92 @@ newWindow.focus();
                       </div>
 
                       <!-- RIGHT CARD -->
-                      <div class="volume-card right-card">
-                        <div class="card-title">Auto Create</div>
+                      <div class="page-wrapper">
 
-                        <!-- Space stats -->
-                        <div class="space-grid">
-                          <div class="space-item">
-                            <span class="space-label">Available Space (GiB)</span>
-                            <span class="space-value">6039</span>
-                          </div>
+  <div class="volume-card right-card">
+    <div class="card-title">Manual Create</div>
 
-                          <div class="space-item">
-                            <span class="space-label">Usable Space (GiB)</span>
-                            <span class="space-value">4095</span>
-                          </div>
-                        </div>
+    <!-- Space stats -->
+    <div class="space-grid">
+      <div class="space-item">
+        <span class="space-label">Available Space (GiB)</span>
+        <span class="space-value">6039</span>
+      </div>
 
+      <div class="space-item">
+        <span class="space-label">Usable Space (GiB)</span>
+        <span class="space-value">4095</span>
+      </div>
+    </div>
 
+    <!-- Desired size -->
+    <div class="form-group">
+      <label class="space-label">Desired Volume Space (GiB)</label>
+      <input
+        class="form-control"
+        name="auto_size"
+        type="text"
+        value="3000"
+        readonly
+      />
+    </div>
 
-                        <!-- Desired size -->
-                        <div class="form-group">
-                          <label class="space-label">
-                            Desired Volume Space (GiB)
-                          </label>
+    <!-- Table -->
+    <table
+  id="table_volume"
+  class="tableshaddow display"
+  width="100%"
+  cellspacing="1"
+  cellpadding="5"
+  border="0">
 
-                          <input class="form-control" name="auto_size" type="text" placeholder="Size in GiB"
-                            value="3000" id="text" size="40" $text_readonly_size="" />
-                        </div>
+  <thead>
+    <tr>
+      <th>Path</th>
+      <th>Resource Name</th>
+      <th>Device Name</th>
+      <th>Block Size</th>
+      <th>Total (GiB)</th>
+      <th>Available (GiB)</th>
+      <th>Current State</th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <tr>
+      <td>async-rep-local</td>
+      <td>async-rep-local</td>
+      <td>async-rep-local</td>
+      <td>16</td>
+      <td>16</td>
+      <td>16</td>
+      <td>Ok</td>
+    </tr>
 
+    <tr>
+      <td>async-rep-local</td>
+      <td>async-rep-local</td>
+      <td>async-rep-local</td>
+      <td>16</td>
+      <td>16</td>
+      <td>16</td>
+      <td>Ok</td>
+    </tr>
 
-                        <!-- Buttons -->
-                        <div class="action-buttons">
-                          <input class="defaultFormButton btn btn-outline-primary btn-main" type="reset" name="reset"
-                            value="Undo" />
+    <!-- add remaining rows here -->
+  </tbody>
 
-                          <input class="defaultFormButton btn btn-primary btn-main" type="submit" name="submitform_"
-                            value="Submit" fdprocessedid="qczasb" onclick="javascript: checkValues();" />
-                        </div>
-                        </div>
+</table>
+
+    <!-- Buttons -->
+    <div class="action-buttons">
+      <button class="btn btn-outline">Undo</button>
+      <button class="btn btn-primary">Submit</button>
+    </div>
+
+  </div>
+
+</div>
                     </form>
                     <form name="switchForm" method="POST" action="https://50.215.24.115/StoneFly/bin/lv_create.pl">
                       <input type="hidden" name="object_name" value="volume-0013" />
@@ -2704,15 +2743,7 @@ newWindow.focus();
           order: [],
           lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]]
         });
-
-        $('#selectAll').on('change', function () {
-          const checked = this.checked;
-          table.$('.delete-checkbox:enabled').prop('checked', checked);
-        });
       }
-      $('#table_volume_filter input')
-        .attr('placeholder', 'Search volumes...')
-        .addClass('form-control');
     });
 
   </script>

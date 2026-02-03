@@ -122,6 +122,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         .element.el-tablo.tablo-height>.info-sec {
             margin:10px 10px 10px 10px !important;
             height: 50px;
+            width: 10% !important;
         }
         .cpu-ram-div1 {
                 width: 33.05% !important;
@@ -139,11 +140,15 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     color: #002D62 !important;
 }
 .menu-side-w {
+      position: relative;
     background-color:#002D62 !important;
     color: #fff;
     border-radius: 0;
     box-shadow: 6px 6px 8px 6px #4f5a6759;
     z-index: 9999;
+}
+.menu-side-w {
+   
 }
 li#j1_1 {
 
@@ -251,10 +256,10 @@ span.gaugeChartLabel {
 }
 .theme-panel > .toggler {
     right: 0px;
-    top: 86px;
+    top: 120px;
     position: absolute;
     box-shadow: rgba(27, 27, 27, 0.25) 0px 1px 19px 7px;
-    background: url(images/icon-color.png) center center no-repeat #184070;
+    background: url(images/icon-color.png) center center no-repeat #002d62;
     border-radius: 4px;
 }
 .health-inline {
@@ -465,8 +470,8 @@ table.table.table-lightborder>thead>tr>th {
 }
 .icon-box-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(177px, 1fr));
+  gap: 12px;
   margin: 20px 20px;
 }
 
@@ -581,6 +586,51 @@ table.table.table-lightborder>thead>tr>th {
 
 .my-arrow-right {
   right: -20px;  /* adjust if needed */
+}
+.arrow {
+    
+}
+/* LEFT SECTION */
+.discovered-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 200px;
+}
+
+.discovered-left h2 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #184070;
+  margin: 0;
+}
+
+.open-btn {
+    margin-top: 30px;
+  width: 60px;
+  height: 22px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #0a2f66 !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* RIGHT SECTION */
+.discovered-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.discovered-right p {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  color: #184070;
+  line-height: 1.2;
 }
 
      </style>
@@ -906,9 +956,124 @@ document.querySelectorAll('.has-sub-menu > a').forEach(menu => {
                      </ul>
                  </div>
                  </div>
- 
+ <style>
+    /* Sidebar animation */
+.menu-side-w {
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+/* ICON SIDEBAR */
+.icon-sidebar {
+    display: none;
+    padding-top: 20px;
+     border-radius: 10px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
+
+}
+
+.icon-sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.icon-sidebar li {
+    
+    padding: 14px 30px;
+    cursor: pointer;
+}
+
+.icon-sidebar i {
+    font-size: 18px;
+    color: #6b6b6b;
+}
+
+/* Hover */
+.icon-sidebar li:hover {
+    background: #f2f4f8;
+}
+
+.icon-sidebar li:hover i {
+    color: #002D62;
+}
+
+/* COLLAPSED STATE */
+.menu-side-w.menu-collapsed {
+
+    background: #ffffff !important;
+}
+
+/* Show icons, hide tree */
+.menu-side-w.menu-collapsed .icon-sidebar {
+    display: block;
+}
+
+.menu-side-w.menu-collapsed #jstree_demo_div {
+    display: none;
+}
+.icon-menu img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Hover */
+.icon-menu li:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+ </style>
                  <div class="menu-and-user" style="margin-top: -60px !important;">
- 
+                    <div class="icon-sidebar" id="iconSidebar">
+                        <ul>
+                       <ul class="icon-menu">
+    <li title="Dashboard">
+        <a href="#">
+            <img src="images/side_dashboard.png" alt="Dashboard">
+        </a>
+    </li>
+
+    <li title="SAN">
+        <a href="#">
+            <img src="images/side_san.png" alt="SAN">
+        </a>
+    </li>
+
+    <li title="Volumes">
+        <a href="#">
+            <img src="images/side_nas.png" alt="Volumes">
+        </a>
+    </li>
+    <li title="Search">
+        <a href="#">
+            <img src="images/side_targetportal.png" alt="Search">
+        </a>
+    </li>
+    <li title="Search">
+        <a href="#">
+            <img src="images/side_resources.png" alt="Search">
+        </a>
+    </li>
+
+    <li title="System">
+        <a href="#">
+            <img src="images/side_system.png" alt="System">
+        </a>
+    </li>
+
+    <li title="Reports">
+        <a href="#">
+            <img src="images/side_reports.png" alt="Reports">
+        </a>
+    </li>
+</ul>
+
+                        </ul>
+                    </div>
+
+
                      <div id="jstree_demo_div" class="jstree jstree-1 jstree-default" role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="j1_1" aria-busy="false"><ul class="jstree-container-ul jstree-children jstree-wholerow-ul jstree-no-dots" role="group"><li role="treeitem"  aria-selected="true" aria-level="1" aria-labelledby="j1_1_anchor" id="j1_1" class="jstree-node jstree-leaf active"><div unselectable="on" role="presentation" class="jstree-wholerow jstree-wholerow-clicked">&nbsp;</div><a class="jstree-anchor jstree-clicked" href="https://50.215.24.115/StoneFly/bin/new_home.pl" tabindex="-1" id="j1_1_anchor"><i class="jstree-icon jstree-themeicon fa fa-tachometer jstree-themeicon-custom" role="presentation"></i>
                                  <strong style="font-size: 16px;">Dashboard</strong></a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-database&quot;}" aria-selected="false" aria-level="1" aria-labelledby="j1_2_anchor" aria-expanded="true" id="j1_2" class="jstree-node has-sub-menu parent jstree-open"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="j1_2_anchor">SAN </a><ul role="group" class="jstree-children" style=""><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-hdd-o&quot;}" aria-selected="false" aria-level="2" aria-labelledby="nav_volumes_anchor" aria-expanded="true" id="nav_volumes" class="jstree-node has-sub-menu jstree-open"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="nav_volumes_anchor"><i class="jstree-icon jstree-themeicon fa fa-hdd-o jstree-themeicon-custom" role="presentation"></i>Volumes</a><ul role="group" class="jstree-children" style=""><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-list fa-sub&quot;}" aria-selected="false" aria-level="3" aria-labelledby="j1_4_anchor" id="j1_4" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://50.215.24.115/StoneFly/bin/lv_summary.pl?" tabindex="-1" id="j1_4_anchor"><i class="jstree-icon jstree-themeicon fa fa-list fa-sub jstree-themeicon-custom" role="presentation"></i>Summary</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-hdd-o fa-sub&quot;}" aria-selected="false" aria-level="3" aria-labelledby="j1_5_anchor" id="j1_5" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://50.215.24.115/StoneFly/bin/replication_summary.pl?" tabindex="-1" id="j1_5_anchor"><i class="jstree-icon jstree-themeicon fa fa-hdd-o fa-sub jstree-themeicon-custom" role="presentation"></i>Replication Summary</a></li><li role="treeitem" data-jstree="{&quot;icon&quot;:&quot;fa fa-plus fa-sub&quot;}" aria-selected="false" aria-level="3" aria-labelledby="j1_6_anchor" aria-expanded="false" id="j1_6" class="jstree-node has-sub-menu jstree-closed"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="javascript:void(0);" tabindex="-1" id="j1_6_anchor"><i class="jstree-icon jstree-themeicon fa fa-plus fa-sub jstree-themeicon-custom" role="presentation"></i>
  
@@ -1095,7 +1260,78 @@ document.querySelectorAll('.has-sub-menu > a').forEach(menu => {
      <input type="hidden" name="sys_uid_oid" value="">
      <input type="hidden" name="sys_oid_chassis_side" value="">
  </form>
- 
+ <style>
+    /* Wrapper aligned like theme toggler */
+.side-icons {
+  position: absolute;
+  right: 0;
+  top: 88px; /* aligns under theme toggler */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+/* Button style */
+.side-icon {
+  width: 42px;
+  height: 42px;
+  background: #002d62;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+
+  /* strong shadow like screenshot */
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Icon size */
+.side-icon i {
+  font-size: 18px;
+}
+
+/* Hover (subtle) */
+.side-icon:hover {
+  background: #004a99;
+  color:white;
+  text-decoration: none;
+}
+#iconSidebar {
+  position: relative;
+  z-index: 20;
+  /* 🔥 THIS IS THE FIX */
+  filter: drop-shadow(6px 0 12px rgba(0, 0, 0, 0.25));
+}
+
+.content-box {
+  position: relative;
+}
+
+/* LEFT EDGE SHADOW */
+.content-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -14px;              /* pull into sidebar area */
+  width: 14px;
+  height: 100%;
+
+  pointer-events: none;
+  z-index: 5;
+
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+
+ </style>
  <!-- END - Breadcrumbs -->
  <div class="theme-panel">
      <div class="toggler" style="display: block;"></div>
@@ -1144,13 +1380,106 @@ document.querySelectorAll('.has-sub-menu > a').forEach(menu => {
                  <option value="default" selected="selected">Default</option>
              </select>
          </div>
-     </div>
+    
+        </div>
+
+         <div class="side-icons">
+            <div class="side-icons">
+                <a href="#" class="side-icon" title="User Manual">
+                    <i class="fa fa-desktop"></i>
+                </a>
+
+                <a href="#" class="side-icon" title="Help">
+                    <i class="fa fa-question-circle"></i>
+                </a>
+                </div>
+
+         </div>
  </div>
  <div>
      <ul class="help">
          <li onclick="javascript:displayHelpWindow(&#39;home_page_help.htm&#39;);"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</li>
      </ul>
  </div>
+
+ <style>
+    .info-bar {
+  background: #002d62;
+  border-radius: 8px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #ffffff;
+}
+
+/* TITLE */
+.info-title {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.info-title i {
+  font-size: 20px;
+  color: #00b4ff;
+  margin-left: 10px;
+}
+
+/* CENTER ITEMS */
+.info-items {
+  display: flex;
+  gap: 40px;
+  flex: 1;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.info-item .label {
+    color:#FFFFFF !important;
+  font-weight: 400;
+  opacity: 0.9;
+  text-align: left;
+}
+
+.info-item .value {
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* DOWNLOAD */
+.info-download { 
+  white-space: nowrap ;
+  margin: 10px  ;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+}
+.download-btn:hover {
+  color: #ffffff;
+}
+.download-btn i {
+  font-size: 20px;
+  color: #00b4ff;
+}
+
+.download-btn small {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+ </style>
  <div class="content-box" style="background: #ffffff;">
      <div class="row">
          <div class="col-sm-12 cpu-ram-div" style="margin-top: 0;max-width: 100% !important;">
@@ -1158,31 +1487,53 @@ document.querySelectorAll('.has-sub-menu > a').forEach(menu => {
              <div class="element-wrapper">
                  
                  
-                 <div class="element el-tablo tablo-height " style="background: #002D62;">
-                  <h5 style="color:white !important;margin-top:6px; padding-left:25px; display: inline-flex; align-items: center;">
-                        <span>Information</span>
-                        <i class="fa fa-angle-right" style="font-size:21px;color:#00B4FF; margin-left: 10px;"></i>
-                    </h5>
-                    <div class="info-sec temperature-table">
-                                                  <div class="label  text-left" style="padding-right:20px;"><b>iSCSI SAN IP:</b> <span style="color:white;">10.1.1.115</span></div>
-                         
- 
-                     </div>
-                     <div class="info-sec temperature-table">
-                         
-                         <div class="label text-left"><b>iSCSI LAN IP:</b><span style="color:white;">50.215.24.115</span> </div>
-                         
-                     </div>
-                     <div class="info-sec temperature-table">
-                         
-                         <div class="label iscsi-label text-left"><b>NAS SAN IP:</b> <span style="color:white;">10.1.1.115</span></div>
-                         
-                     </div>
-                     <div class="info-sec temperature-table">
-                         
-                         <div class="label iscsi-label text-left"><b>NAS LAN IP:</b><span style="color:white;">50.215.24.115</span></div>
-                     </div>
-                 </div>
+                <div class="element-wrapper">
+  <div class="element el-tablo info-bar">
+
+    <!-- LEFT: TITLE -->
+    <div class="info-title">
+      <span>Information</span>
+      <i class="fa fa-angle-right"></i>
+    </div>
+
+    <!-- CENTER: IP INFO -->
+    <div class="info-items">
+      <div class="info-item">
+        <span class="label">iSCSI SAN IP:</span>
+        <span class="value">192.168.10.255</span>
+      </div>
+
+      <div class="info-item">
+        <span class="label">NAS LAN IP:</span>
+        <span class="value">192.168.10.255</span>
+      </div>
+
+      <div class="info-item">
+        <span class="label">iSCSI LAN IP:</span>
+        <span class="value">192.168.10.255</span>
+      </div>
+
+      <div class="info-item">
+        <span class="label">NAS SAN IP:</span>
+        <span class="value">192.168.10.255</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: DOWNLOAD -->
+    <div class="info-download">
+      <a href="#" class="download-btn">
+      
+        <span>
+          Download User Manual<br>
+          <small style="font-weight: 400;">Storage Concentrator</small>
+        </span>
+          <i class="fa fa-file-pdf-o"></i>
+      </a>
+    </div>
+
+  </div>
+</div>
+
              </div>
          </div>
  
@@ -1242,7 +1593,7 @@ document.querySelectorAll('.has-sub-menu > a').forEach(menu => {
                         <table cellpadding="0" cellspacing="8" border="0" width="100%">
                             
                             <tbody><tr>
-                            <img src="https://50.215.24.115/StoneFly/presentation/stonefly/active_en_US.gif" class="cluster-status">
+                            <img src="images/active_en_US.gif" class="cluster-status">
 
                                 <td align="left" nowrap=""><b style="color:#0e1d7d;">Unit ID:</b>&nbsp;&nbsp;&nbsp;<a href="javascript:do_system_uid(&#39;1&#39;);"><img border="0" src="./SC-50-215-24-115~50.215.24.115_files/uid-btn.gif" title="Click for a visual System Unit Identification indication."></a></td>
                             </tr>
@@ -1274,7 +1625,7 @@ document.querySelectorAll('.has-sub-menu > a').forEach(menu => {
     <div class="server-inline">
 
         <a href="https://50.215.24.115/StoneFly/bin/ff_diagnostics.pl" class="server-item">
-            <img src="./SC-50-215-24-115~50.215.24.115_files/supermicro-16.gif"
+            <img src="images/supermicro-16.gif"
                  class="img-diagnose"
                  title="ISC_X11_10_GBE_teamed">
         
@@ -1302,17 +1653,17 @@ document.querySelectorAll('.has-sub-menu > a').forEach(menu => {
             <div class="health-inline">
 
                 <a href="https://50.215.24.115/StoneFly/bin/ff_diagnostics.pl#Temperatures%20for%20SC-50-215-24-115" class="health-item">
-                    <img src="https://50.215.24.115/StoneFly/presentation/stonefly/temp-blue.gif" title="ok">
+                    <img src="images/temp-blue.gif" title="ok">
                     <p>Temp</p>
                 </a>
 
                 <a href="https://50.215.24.115/StoneFly/bin/ff_diagnostics.pl#Fans%20for%20SC-50-215-24-115" class="health-item">
-                    <img src="./SC-50-215-24-115~50.215.24.115_files/fan-green.gif" title="ok">
+                    <img src="images/fan-green.gif" title="ok">
                     <p>Fan</p>
                 </a>
 
                 <a href="https://50.215.24.115/StoneFly/bin/ff_diagnostics.pl#Power%20Supplies%20for%20SC-50-215-24-115" class="health-item">
-                    <img src="./SC-50-215-24-115~50.215.24.115_files/power-green.gif" title="ok">
+                    <img src="images/power-green.gif" title="ok">
                     <p>Power</p>
                 </a>
 
@@ -1410,135 +1761,195 @@ document.querySelectorAll('.has-sub-menu > a').forEach(menu => {
                 style="width:30% !important; display:flex; align-items:center; justify-content:center; max-height:120px;">
 
                 <div class="element-wrapper" style="display:flex; align-items:center; justify-content:center;">
-                    <img src="images/support icon.png" alt="">
-                    <span style="font-weight:700;font-size:16px;color:#184070; margin-left:10px;">
-                        Quick Links
-                    </span>
-                    <span style="font-weight:400;font-size:16px;color:#184070; margin-left:6px;">
-                        Customer Support
-                    </span>
+                    <div class="discovered-left">
+                        <h2>Discovered SC's</h2>
+                        <button class="open-btn">Open</button>
+                    </div>
+
+                    <div class="discovered-right">
+                        <p>SC-192-168-10-250</p>
+                        <p>SC-192-168-10-250</p>
+                        <p>SC-192-168-10-250</p>
+                        <p>SC-192-168-10-250</p>
+                    </div>  
                 </div>
 
         </div>
      </div>
- 
+ <style>
+    .quick-nav {
+  background: linear-gradient(180deg, #0b3a6e, #082f5a);
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin: 10px 20px 20px 20px;
+  padding: 20px;
+
+}
+
+.quick-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.recently-used {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.recently-used .arrow {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.quick-pill {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.quick-pill:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.quick-pill.active {
+  background: #ffffff;
+  color: #0b3a6e;
+  border-color: #ffffff;
+  font-weight: 600;
+}
+.icon-box-main {
+    border:3px solid #002D62;
+    border-radius: 5px;
+    margin: 20px;
+    background: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+.icon-box-main h2 {
+    color: #0b3a6e;
+    font-family: Poppins;
+font-weight: 700;
+font-size: 15px;
+
+line-height: 100%;
+letter-spacing: 0%;
+margin-left:18px;
+
+}
+
+ </style>    
+ <div class="quick-nav">
+  <div class="quick-nav-inner">
+    <span class="recently-used">
+      Recently Used <span class="arrow"><i class="fa fa-chevron-right" aria-hidden="true" style="color: #00B4FF;"></i></span>
+    </span>
+    
+        <a href="#" class="quick-pill" data-key="SAN">SAN</a>
+        <a href="#" class="quick-pill" data-key="NAS">NAS</a>
+        <a href="#" class="quick-pill" data-key="Target Portal">Target Portal</a>
+        <a href="#" class="quick-pill" data-key="Resources">Resources</a>
+        <a href="#" class="quick-pill" data-key="System">System</a>
+ <div class="recently-used-links"></div>
+  </div>
+</div>
+<div class="icon-box-main">
+    <h2 class="">Quick Links</h2>
     <div class="icon-box-grid">
 
-  <a href="#" class="icon-box active">
-    <img src="images/SAN.png" alt="SAN">
-    <h4>SAN</h4>
-    <p>Here for SAN</p>
-  </a>
+            <a href="#" class="icon-box active" data-key="SAN">
+                <img src="images/SAN.png" alt="SAN">
+                <h4>SAN</h4>
+                <p>Here for SAN</p>
+            </a>
 
-  <a href="#" class="icon-box">
-    <img src="images/NAS.png" alt="NAS">
-    <h4>NAS</h4>
-    <p>Here for NAS</p>
-  </a>
+            <a href="#" class="icon-box">
+                <img src="images/NAS.png" alt="NAS" data-key="NAS">
+                <h4>NAS</h4>
+                <p>Here for NAS</p>
+            </a>
 
-  <a href="#" class="icon-box">
-    <img src="images/TargetPortal.png" alt="Target Portal">
-    <h4>Target Portal</h4>
-    <p>Portal Settings</p>
-  </a>
+            <a href="#" class="icon-box">
+                <img src="images/TargetPortal.png" alt="Target Portal" data-key="Target Portal">
+                <h4>Target Portal</h4>
+                <p>Portal Settings</p>
+            </a>
 
-  <a href="#" class="icon-box">
-    <img src="images/Resources.png" alt="Resources">
-    <h4>Resources</h4>
-    <p>See Resources here</p>
-  </a>
+            <a href="#" class="icon-box">
+                <img src="images/Resources.png" alt="Resources" data-key="Resources">
+                <h4>Resources</h4>
+                <p>See Resources here</p>
+            </a>
 
-  <a href="#" class="icon-box">
-    <img src="images/System.png" alt="System">
-    <h4>System</h4>
-    <p>Edit / View System Setting</p>
-  </a>
+            <a href="#" class="icon-box">
+                <img src="images/System.png" alt="System" data-key="system">
+                <h4>System</h4>
+                <p>Edit / View System Setting</p>
+            </a>
 
-  <a href="#" class="icon-box">
-    <img src="images/Reports.png" alt="Reports">
-    <h4>Reports</h4>
-    <p>Edit / View Reports</p>
-  </a>
+            <a href="#" class="icon-box">
+                <img src="images/Reports.png" alt="Reports">
+                <h4>Reports</h4>
+                <p>Edit / View Reports</p>
+            </a>
 
-</div>
- <div class="icon-box-grid">
+    </div>
+    <div class="icon-box-grid">
 
-  <a href="#" class="icon-box active">
-    <img src="images/SAN.png" alt="SAN">
-    <h4>SAN</h4>
-    <p>Here for SAN</p>
-  </a>
+            <a href="#" class="icon-box active">
+                <img src="images/SAN.png" alt="SAN">
+                <h4>SAN</h4>
+                <p>Here for SAN</p>
+            </a>
 
-  <a href="#" class="icon-box">
-    <img src="images/NAS.png" alt="NAS">
-    <h4>NAS</h4>
-    <p>Here for NAS</p>
-  </a>
+            <a href="#" class="icon-box">
+                <img src="images/NAS.png" alt="NAS">
+                <h4>NAS</h4>
+                <p>Here for NAS</p>
+            </a>
 
-  <a href="#" class="icon-box">
-    <img src="images/TargetPortal.png" alt="Target Portal">
-    <h4>Target Portal</h4>
-    <p>Portal Settings</p>
-  </a>
+            <a href="#" class="icon-box">
+                <img src="images/TargetPortal.png" alt="Target Portal">
+                <h4>Target Portal</h4>
+                <p>Portal Settings</p>
+            </a>
 
-  <a href="#" class="icon-box">
-    <img src="images/Resources.png" alt="Resources">
-    <h4>Resources</h4>
-    <p>See Resources here</p>
-  </a>
+            <a href="#" class="icon-box">
+                <img src="images/Resources.png" alt="Resources">
+                <h4>Resources</h4>
+                <p>See Resources here</p>
+            </a>
 
-  <a href="#" class="icon-box">
-    <img src="images/System.png" alt="System">
-    <h4>System</h4>
-    <p>Edit / View System Setting</p>
-  </a>
+            <a href="#" class="icon-box">
+                <img src="images/System.png" alt="System">
+                <h4>System</h4>
+                <p>Edit / View System Setting</p>
+            </a>
 
-  <a href="#" class="icon-box">
-    <img src="images/Reports.png" alt="Reports">
-    <h4>Reports</h4>
-    <p>Edit / View Reports</p>
-  </a>
+            <a href="#" class="icon-box">
+                <img src="images/Reports.png" alt="Reports">
+                <h4>Reports</h4>
+                <p>Edit / View Reports</p>
+            </a>
 
-</div>
- <div class="icon-box-grid">
-
-  <a href="#" class="icon-box active">
-    <img src="images/SAN.png" alt="SAN">
-    <h4>SAN</h4>
-    <p>Here for SAN</p>
-  </a>
-
-  <a href="#" class="icon-box">
-    <img src="images/NAS.png" alt="NAS">
-    <h4>NAS</h4>
-    <p>Here for NAS</p>
-  </a>
-
-  <a href="#" class="icon-box">
-    <img src="images/TargetPortal.png" alt="Target Portal">
-    <h4>Target Portal</h4>
-    <p>Portal Settings</p>
-  </a>
-
-  <a href="#" class="icon-box">
-    <img src="images/Resources.png" alt="Resources">
-    <h4>Resources</h4>
-    <p>See Resources here</p>
-  </a>
-
-  <a href="#" class="icon-box">
-    <img src="images/System.png" alt="System">
-    <h4>System</h4>
-    <p>Edit / View System Setting</p>
-  </a>
-
-  <a href="#" class="icon-box">
-    <img src="images/Reports.png" alt="Reports">
-    <h4>Reports</h4>
-    <p>Edit / View Reports</p>
-  </a>
+    </div>
 
 </div>
+
+
 
 <!-- Carousal Code -->
 
@@ -2406,6 +2817,69 @@ $(document).ready(function () {
 <script>
   window.NETDATA = window.NETDATA || {};
   NETDATA.serverStatic = '/js/';
+</script>
+<script>
+document.getElementById("toggleSidebar").addEventListener("click", function () {
+    document
+        .querySelector(".menu-side-w")
+        .classList.toggle("menu-collapsed");
+});
+</script>
+<script>
+const MAX_RECENT = 5;
+const STORAGE_KEY = "recentlyUsedLinks";
+
+function getRecent() {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+}
+
+function saveRecent(list) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+}
+
+function addRecent(item) {
+    let recent = getRecent();
+
+    // Remove if already exists
+    recent = recent.filter(i => i !== item);
+
+    // Add to top
+    recent.unshift(item);
+
+    // Limit count
+    if (recent.length > MAX_RECENT) {
+        recent.length = MAX_RECENT;
+    }
+
+    saveRecent(recent);
+    renderRecent();
+}
+
+function renderRecent() {
+    const container = document.querySelector(".recently-used-links");
+    if (!container) return;
+
+    const recent = getRecent();
+    container.innerHTML = "";
+
+    recent.forEach(item => {
+        const a = document.createElement("a");
+        a.href = "#";
+        a.className = "quick-pill";
+        a.textContent = item;
+        container.appendChild(a);
+    });
+}
+
+// Track clicks
+document.querySelectorAll("[data-key]").forEach(el => {
+    el.addEventListener("click", () => {
+        addRecent(el.dataset.key);
+    });
+});
+
+// Initial load
+renderRecent();
 </script>
 
 <script src="js/dashboard.js"></script>
